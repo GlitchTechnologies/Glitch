@@ -3,6 +3,8 @@
 Glitch — платформа для общения в играх. В нём есть личные чаты,
 сообщества с текстовыми и голосовыми каналами и демонстрация экрана.
 
+<img width="1024" height="421" alt="logo3" src="https://github.com/user-attachments/assets/c4db4477-0181-4d17-b653-10c6f19c7b61" />
+
 ## Исходный код
 
 - [`mobile/`](mobile/) — клиент на Flutter для Android и Web-версии.
