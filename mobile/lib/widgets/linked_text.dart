@@ -196,10 +196,6 @@ class _LinkedTextState extends State<LinkedText> {
       }
     }
     if (widget.suffix != null) spans.add(widget.suffix!);
-    // Отсюда и брался баг: сообщение или пост со ссылкой не выделялись ВООБЩЕ,
-    // тогда как точно такой же текст без ссылки выделялся (найдено владельцем
-    // 2026-08-22). Со стороны выглядело как «выделение сломано у ссылок», а на
-    // деле выделять было просто нечего.
     final registrar = SelectionContainer.maybeOf(context);
     final richText = RichText(
       key: _textKey,

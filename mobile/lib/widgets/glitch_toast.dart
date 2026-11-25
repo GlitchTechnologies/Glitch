@@ -13,12 +13,7 @@ class GlitchToast {
     ToastType type = ToastType.error,
     Duration duration = const Duration(seconds: 3),
   }) {
-    // Так и случалось, когда тост показывали с context'ом от navigatorKey:
-    // это context самого Navigator'а, а Overlay живёт внутри него, то есть
-    // среди предков его нет и быть не может. Поймано живым отчётом об ошибке с
-    // телефона (app_logs #553): звонок не дозвонился → показ ошибки → падение
-    // приложения → обрыв WebSocket → сервер счёл звонящего ушедшим и записал
-    // «Отменённый вызов». То есть безобидный на вид тост ронял звонки.
+    // Если контекст принадлежит самому Navigator, его Overlay находится ниже в дереве.
     final overlay = Overlay.maybeOf(context) ?? navigatorKey.currentState?.overlay;
     if (overlay == null) return; // показывать некуда — молчим, но не падаем
 

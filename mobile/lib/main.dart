@@ -137,14 +137,7 @@ void _syncThemeAccount() {
   themeProvider.bindAccount(user?.id);
 }
 
-/// ЗАЧЕМ (найдено разбором журнала 2026-08-25). В app_logs за 18 дней накопилось
-/// 393 записи «Invalid argument(s): string is not well-formed UTF-16» у разных
-/// людей и на четырёх разных экранах. Разобрать их было НЕЧЕМ: у ошибок
-/// РАЗМЕТКИ стек состоит из одного фреймворка (`addText` → `TextPainter` →
-/// `RenderParagraph` → …), ни одного кадра нашего кода в нём нет и быть не
-/// может — виджет строился раньше, в другом кадре. Мы отправляли только
-/// `exception` и `stack`, то есть ровно ту половину, которая ни на что не
-/// отвечает.
+/// Добавляет контекст виджета, когда стек содержит только вызовы Flutter.
 String? _flutterErrorContext(FlutterErrorDetails details) {
   try {
     final buf = StringBuffer();

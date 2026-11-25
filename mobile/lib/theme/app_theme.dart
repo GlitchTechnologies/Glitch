@@ -131,9 +131,7 @@ class AppTheme {
       ),
       // Без этой строки движок веб-версии (CanvasKit) качал бы эмодзи-шрифт с
       // серверов Google уже во время работы, и до конца загрузки эмодзи в
-      // никах рисовались бы чёрно-белым контуром (реальная жалоба владельца,
-      // 2026-08-19/20). Подробности и почему обходных путей нет — в
-      // pubspec.yaml рядом с объявлением семейства.
+      // никах могли бы отображаться чёрно-белым контуром.
       textTheme: (isLight ? ThemeData.light() : ThemeData.dark()).textTheme.apply(
         fontFamily: 'Inter Tight',
         fontFamilyFallback: const ['Noto Color Emoji'],

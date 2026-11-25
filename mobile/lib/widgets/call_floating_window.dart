@@ -15,7 +15,7 @@ const double _kWideWindowLongSide = 330;
 const double _kWindowRadius = 12;
 const double _kHangupSize = 28;
 
-/// ЧТО В НЁМ — по формуле владельца:
+/// Как выбирается содержимое мини-окна.
 ///  * показываю экран сам — моя демонстрация;
 ///  * иначе наблюдаю чью-то (`voiceConnection.lastWatched`) — она; наблюдаю
 ///    несколько — та, что открыл последней;

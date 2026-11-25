@@ -1,5 +1,5 @@
 /// Какой экран сейчас открыт — только для отчётов об ошибках
-/// (error_reporter.dart). Без этого поле `screen` в app_logs всегда пустое:
+/// (error_reporter.dart).
 /// глобальные перехватчики (FlutterError.onError/PlatformDispatcher.onError
 /// в main.dart) сами по себе не знают, что было на экране в момент падения.
 ///
