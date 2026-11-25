@@ -1,0 +1,2105 @@
+{
+  "@@locale": "ru",
+  "presenceIdle": "Неактивен",
+  "presenceDnd": "Не беспокоить",
+  "presenceInvisible": "Невидимый",
+  "presenceDndHint": "Вы не будете получать уведомления о сообщениях",
+  "presenceInvisibleHint": "У вас будет статус «Не в сети»",
+  "presenceFor3d": "На 3 дня",
+  "presenceForever": "Навсегда",
+  "cancel": "Отмена",
+  "ok": "Ок",
+  "save": "Сохранить",
+  "commonCreate": "Создать",
+  "delete": "Удалить",
+  "pin": "Закрепить",
+  "unpin": "Открепить",
+  "pinnedMessage": "Закреплённое сообщение",
+  "more": "Ещё",
+  "messageCopied": "Скопировано",
+  "messageDeleteTitle": "Удалить сообщение?",
+  "messageDeleteBody": "Сообщение будет удалено без возможности восстановления.",
+  "chatDeletedToast": "Чат удалён — не осталось сообщений",
+  "groupRemovedToast": "Вас исключили из группы",
+  "groupDeletedToast": "Группа удалена",
+  "done": "Готово",
+  "edit": "Изменить",
+  "add": "Добавить",
+  "send": "Отправить",
+  "sendCount": "Отправить {count}",
+  "@sendCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectedCount": "{count} выбрано",
+  "@selectedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "you": "вы",
+  "logout": "Выйти",
+  "logoutTitle": "Выйти из аккаунта?",
+  "retry": "Повторить",
+  "settings": "Настройки",
+  "media": "Медиа",
+  "files": "Файлы",
+  "noMedia": "Нет медиа",
+  "noFiles": "Нет файлов",
+  "loading": "Загрузка...",
+  "notifications": "Уведомления",
+  "email": "Почта",
+  "description": "Описание",
+  "privacy": "Конфиденциальность",
+  "securitySessionsCurrent": "Это устройство",
+  "securitySessionsActiveNow": "Активно сейчас",
+  "securitySessionsLastSeenAt": "Последняя активность: {date}",
+  "@securitySessionsLastSeenAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "securitySessionsTerminate": "Завершить сессию",
+  "securitySessionsTerminateConfirmTitle": "Завершить сессию?",
+  "securitySessionsTerminateConfirmBody": "Устройство «{device}» будет разлогинено.",
+  "@securitySessionsTerminateConfirmBody": {
+    "placeholders": {
+      "device": {
+        "type": "String"
+      }
+    }
+  },
+  "securitySessionsTerminateAll": "Завершить все другие сессии",
+  "securitySessionsTerminateAllConfirmTitle": "Завершить все другие сессии?",
+  "securitySessionsTerminateAllConfirmBody": "Все устройства, кроме этого, будут разлогинены.",
+  "securitySessionsTerminated": "Сессия завершена",
+  "securitySessionsTerminatedAll": "Остальные сессии завершены",
+  "qrLoginEntryLink": "Войти с помощью QR-кода",
+  "qrLoginTitle": "Вход по QR-коду",
+  "qrLoginInstructions": "Откройте Glitch на устройстве, где вы уже вошли в аккаунт: Настройки → Устройства → Подключить устройство — и наведите камеру на этот код.",
+  "qrLoginExpired": "QR-код истёк",
+  "qrLoginRetry": "Показать новый код",
+  "qrLoginStartError": "Не удалось создать QR-код. Проверьте соединение.",
+  "qrScanConfirmTitle": "Подключить устройство?",
+  "qrScanConfirmBody": "Устройство «{device}» получит доступ к вашему аккаунту.",
+  "@qrScanConfirmBody": {
+    "placeholders": {
+      "device": {
+        "type": "String"
+      }
+    }
+  },
+  "qrScanConfirmButton": "Подтвердить",
+  "qrScanInstructions": "Наведите камеру на QR-код на другом устройстве",
+  "qrScanApproveError": "Не удалось подключить устройство",
+  "qrScanCameraError": "Не удалось получить доступ к камере",
+  "qrConnectDeviceHint": "Вы можете войти в приложение на другом устройстве с помощью QR-кода",
+  "qrConnectDeviceButton": "Подключить устройство",
+  "qrConnectDeviceSuccess": "Устройство подключено",
+  "appearance": "Внешний вид",
+  "folders": "Папки",
+  "foldersAll": "Все",
+  "foldersCreate": "Создать папку",
+  "foldersHint": "Папки помогают разделить чаты по темам — например, работа, учёба, личное.",
+  "folderNew": "Новая папка",
+  "folderEditTitle": "Изменить папку",
+  "folderNameHint": "Название папки",
+  "folderNameEmpty": "Введите название",
+  "folderAddChats": "Добавить чаты",
+  "folderPickTitle": "Выберите чаты",
+  "folderDeleteTitle": "Удалить папку?",
+  "folderDeleteBody": "Папка будет удалена. Сами чаты останутся на месте — папка только фильтровала список.",
+  "folderEmpty": "В этой папке пока нет чатов",
+  "folderChatsCount": "{count, plural, =0{Нет чатов} one{{count} чат} few{{count} чата} other{{count} чатов}}",
+  "@folderChatsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "appearanceThemeSection": "Темы по умолчанию",
+  "appearanceDark": "Тёмная",
+  "appearanceLight": "Светлая",
+  "appearanceOnyx": "Оникс",
+  "appearanceCustomThemeTitle": "Кастомное оформление Glitch",
+  "appearanceCustomThemeDescription": "Создай персонализированную тему.",
+  "appearanceEditorPreview": "Предпросмотр",
+  "appearanceEditorColors": "Цвета",
+  "appearanceEditorAddColor": "Добавить цвет",
+  "appearanceEditorRemoveColor": "Убрать цвет",
+  "appearanceEditorDirection": "Направление градиента",
+  "appearanceEditorIntensity": "Интенсивность цвета",
+  "appearanceEditorApply": "Применить",
+  "appearanceEditorSaveError": "Не удалось сохранить тему.",
+  "appearanceAccentColor": "Акцентный цвет",
+  "chats": "Чаты",
+  "language": "Язык",
+  "linkCopied": "Ссылка скопирована",
+  "nicknameCopied": "Ник скопирован",
+  "linkNotFound": "Ссылка не найдена",
+  "copy": "Копировать",
+  "share": "Поделиться",
+  "mute": "Без звука",
+  "errorLoad": "Не удалось загрузить",
+  "savedToGallery": "Сохранено в галерею",
+  "saveFailed": "Не удалось сохранить",
+  "mediaOpenInNewTab": "Открыть в новой вкладке",
+  "mediaSaveToDownloads": "Сохранить в загрузки",
+  "mediaCopyLink": "Копировать ссылку",
+  "mediaSaveImageAs": "Сохранить изображение как…",
+  "mediaSaveVideoAs": "Сохранить видео как…",
+  "mediaCopyImage": "Копировать изображение",
+  "mediaImageCopied": "Изображение скопировано",
+  "mediaCopyImageFailed": "Не удалось скопировать изображение",
+  "shareFailed": "Не удалось поделиться",
+  "later": "Позже",
+  "about": "О приложении",
+  "updates": "Обновления",
+  "name": "Название",
+  "group": "Группа",
+  "file": "Файл",
+  "public": "Публичный",
+  "private": "Приватный",
+  "search": "Поиск",
+  "open": "Открыть",
+  "roleOwner": "владелец",
+  "roleAdmin": "администратор",
+  "geoLabel": "Геопозиция · {coords}",
+  "@geoLabel": {
+    "placeholders": {
+      "coords": {
+        "type": "String"
+      }
+    }
+  },
+  "geoOpen": "Открыть",
+  "inputHintMessage": "Сообщение",
+  "inputHintCaptionPhoto": "Подпись к фото...",
+  "inputHintCaptionFile": "Подпись к файлу...",
+  "inputHintCaptionGeo": "Подпись к геопозиции...",
+  "recordingCancel": "ОТМЕНА",
+  "recordingSlideToCancel": "Влево — отмена",
+  "recordingSending": "Отправка...",
+  "sendFailed": "Не удалось отправить",
+  "micPermissionDenied": "Нет разрешения на микрофон",
+  "videoNote": "Видеосообщение",
+  "cameraPermissionDenied": "Доступ к камере запрещён. Разрешите в настройках.",
+  "goToProfile": "ОТКРЫТЬ ПРОФИЛЬ",
+  "compressing": "Сжатие...",
+  "loginTitle": "Связь на новой частоте",
+  "loginPassword": "Пароль",
+  "loginNoAccount": "Нет аккаунта?",
+  "loginRegister": "Зарегистрироваться",
+  "loginSubmit": "Войти",
+  "loginForgotPassword": "Забыли пароль?",
+  "loginFillFields": "Заполните все поля",
+  "registerTitle": "Регистрация",
+  "registerDisplayName": "Отображаемое имя",
+  "registerDisplayNameHint": "Как вас будут видеть",
+  "registerPasswordHint": "Минимум 6 символов",
+  "registerEmail": "Электронная почта",
+  "registerEmailHint": "На неё придёт код подтверждения",
+  "registerEmailRequired": "Укажите адрес электронной почты",
+  "errorGeneric": "Произошла ошибка. Попробуйте снова.",
+  "emailVerifyTitle": "Подтверждение почты",
+  "emailVerifyDescription": "Мы отправили код подтверждения на {email}. Введите его ниже.",
+  "emailVerifySpamHint": "Письмо приходит в течение минуты. Если его нет — проверьте папку «Спам».",
+  "@emailVerifyDescription": {
+    "placeholders": {
+      "email": {
+        "type": "String"
+      }
+    }
+  },
+  "emailVerifyCodeHint": "Код из письма",
+  "emailVerifySubmit": "Подтвердить",
+  "emailVerifyResend": "Отправить ещё раз",
+  "emailVerifyResendIn": "Отправить ещё раз через {seconds} сек.",
+  "@emailVerifyResendIn": {
+    "placeholders": {
+      "seconds": {
+        "type": "int"
+      }
+    }
+  },
+  "emailVerifyEnterCode": "Введите код из письма",
+  "registerAgreement": "Регистрируясь, вы соглашаетесь с ",
+  "registerPrivacyLink": "Политикой конфиденциальности",
+  "registerSubmit": "Создать аккаунт",
+  "registerFillRequired": "Заполните обязательные поля",
+  "registerNicknameHint": "Только латиница, цифры, _",
+  "restoreTitle": "Восстановление пароля",
+  "restoreNicknameHint": "никнейм",
+  "restoreEmailHint": "Электронная почта",
+  "restoreNewPasswordHint": "Новый пароль",
+  "restoreSubmit": "Изменить пароль",
+  "restoreSuccess": "Пароль изменён!",
+  "restoreSuccessHint": "Войдите с новым паролем",
+  "restoreBackToLogin": "Назад ко входу",
+  "restoreFillFields": "Заполните все поля",
+  "restoreDescription": "Введите ваш никнейм и телефон, который вы привязали при регистрации",
+  "profileTitle": "Профиль",
+  "accountName": "Имя",
+  "accountEditEmail": "Изменить почту",
+  "accountEmailPasswordHint": "Текущий пароль",
+  "accountEmailPasswordWhy": "Пароль нужен, чтобы почту не смог подменить посторонний, получивший доступ к вашему телефону.",
+  "accountBio": "О себе",
+  "accountBioPlaceholder": "Расскажите о себе",
+  "contactOnline": "в сети",
+  "contactWrite": "Написать",
+  "contactBlock": "Заблокировать",
+  "contactUnblock": "Разблокировать",
+  "contactBlockedBanner": "Вы заблокировали этого пользователя. Он не может писать вам и видеть ваш статус.",
+  "contactBlockedTitle": "Пользователь заблокирован",
+  "contactUnblockedTitle": "Пользователь разблокирован",
+  "blockedUsersEmpty": "Нет заблокированных пользователей",
+  "securityBlacklist": "Чёрный список",
+  "changePasswordTitle": "Смена пароля",
+  "changePasswordDescription": "Введите текущий пароль и придумайте новый.",
+  "changePasswordCurrent": "Текущий пароль",
+  "changePasswordNew": "Новый пароль",
+  "changePasswordRepeat": "Повторите новый пароль",
+  "changePasswordHint": "Минимум 6 символов",
+  "changePasswordFillFields": "Заполните все поля",
+  "changePasswordMismatch": "Пароли не совпадают",
+  "changePasswordSuccess": "Пароль изменён",
+  "twoFactor": "Двухфакторная авторизация",
+  "twoFactorOn": "Включена",
+  "twoFactorOff": "Выключена",
+  "twoFactorAbout": "Дополнительная защита входа. Кроме пароля потребуется код из приложения-аутентификатора — Google Authenticator, Яндекс Ключ или любого другого.",
+  "twoFactorEnable": "Включить",
+  "twoFactorDisable": "Отключить",
+  "twoFactorBackupCodesLeft": "Резервных кодов осталось: {n}",
+  "@twoFactorBackupCodesLeft": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "twoFactorNewBackupCodes": "Новые резервные коды",
+  "twoFactorEnterPassword": "Введите пароль",
+  "twoFactorPasswordHint": "Пароль от аккаунта",
+  "twoFactorSetupTitle": "Подключение",
+  "twoFactorSetupStep1": "1. Установите приложение-аутентификатор, если его ещё нет: Google Authenticator, Яндекс Ключ или любое другое.",
+  "twoFactorSetupStep2": "2. Добавьте в нём аккаунт вручную и введите этот ключ:",
+  "twoFactorSetupStep3": "3. Введите шестизначный код, который покажет приложение:",
+  "twoFactorKeyCopied": "Ключ скопирован",
+  "twoFactorShowQr": "Показать QR-код",
+  "twoFactorHideQr": "Скрыть QR-код",
+  "twoFactorQrHint": "QR подойдёт, если аутентификатор установлен на другом устройстве — отсканировать код с экрана того же телефона не получится.",
+  "twoFactorCodeHint": "Код из приложения",
+  "twoFactorConfirm": "Подтвердить",
+  "twoFactorEnabledToast": "Двухфакторная авторизация включена",
+  "twoFactorDisabledToast": "Двухфакторная авторизация отключена",
+  "twoFactorCodesTitle": "Резервные коды",
+  "twoFactorCodesWarning": "Сохраните эти коды. Каждый работает один раз и заменяет код из приложения — они понадобятся, если телефон с аутентификатором потеряется. Второй раз мы их не покажем.",
+  "twoFactorCodesCopy": "Скопировать все",
+  "twoFactorCodesCopied": "Коды скопированы",
+  "twoFactorCodesSaved": "Я сохранил коды",
+  "twoFactorDisableTitle": "Отключение",
+  "twoFactorDisableWarning": "После отключения для входа будет достаточно пароля. Резервные коды перестанут работать.",
+  "twoFactorLoginTitle": "Подтверждение входа",
+  "twoFactorLoginDescription": "Откройте приложение-аутентификатор и введите код для аккаунта Glitch.",
+  "twoFactorUseBackupCode": "Использовать резервный код",
+  "twoFactorUseAppCode": "Ввести код из приложения",
+  "twoFactorBackupCodeHint": "Резервный код",
+  "twoFactorEnterCode": "Введите код",
+  "twoFactorRegenerateWarning": "Прежние резервные коды перестанут работать сразу после выпуска новых.",
+  "contactNoMedia": "Нет медиафайлов",
+  "contactNoFiles": "Нет файлов",
+  "contactError": "Ошибка: {e}",
+  "@contactError": {
+    "placeholders": {
+      "e": {
+        "type": "String"
+      }
+    }
+  },
+  "chatBlockedBanner": "Переписка заблокирована",
+  "chatSearchHint": "Поиск в чате",
+  "presenceOnlineAgo": "в сети {minutes} мин назад",
+  "@presenceOnlineAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "presenceOnlineAt": "в сети в {time}",
+  "@presenceOnlineAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "presenceOnlineYesterday": "в сети вчера",
+  "presenceOnlineDate": "в сети {date}",
+  "@presenceOnlineDate": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "presenceJustNow": "только что",
+  "chatsSearch": "Поиск чатов",
+  "chatsEmpty": "Нет чатов",
+  "chatsNothingFound": "Ничего не найдено",
+  "chatsEmptyHint": "Найдите человека через поиск вверху",
+  "shellSelectChat": "Выберите чат",
+  "chatsFindOrStart": "Найти или начать беседу",
+  "homeFriends": "Друзья",
+  "homeMessageRequests": "Запросы общения",
+  "homeShop": "Магазин",
+  "homeSectionSoon": "Скоро здесь появится этот раздел.",
+  "searchWindowHint": "Куда отправимся?",
+  "searchSectionRecent": "НЕДАВНИЕ",
+  "searchSectionPeople": "ЛЮДИ",
+  "searchSectionGroups": "ГРУППЫ",
+  "searchSectionRooms": "КАНАЛЫ",
+  "searchSectionServers": "СООБЩЕСТВА",
+  "searchNothingFound": "Ничего не найдено",
+  "searchFailed": "Не удалось выполнить поиск",
+  "searchTip": "Начните с @, # или *, чтобы искать только людей, каналы или сообщества.",
+  "membersCount": "{count, plural, one{{count} участник} few{{count} участника} other{{count} участников}}",
+  "@membersCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "adminsCount": "{count, plural, one{{count} администратор} few{{count} администратора} other{{count} администраторов}}",
+  "@adminsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "groupNameLabel": "Название",
+  "groupNameHint": "Название группы",
+  "groupDescriptionHint": "Описание группы",
+  "groupNameEmpty": "Название не может быть пустым",
+  "groupLeaveTitle": "Выйти из группы?",
+  "groupLeaveBtn": "Покинуть группу",
+  "groupDeleteTitle": "Удалить группу?",
+  "groupDeleteBody": "Вы точно готовы удалить группу? Все участники будут удалены из неё соответственно.",
+  "groupDeleteBtn": "Удалить группу",
+  "groupJoinTitle": "Вступить в группу «{name}»?",
+  "@groupJoinTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "groupJoinButton": "Вступить",
+  "groupOpenChat": "Открыть чат",
+  "groupMembersHeader": "УЧАСТНИКОВ",
+  "adminBadge": "админ",
+  "memberBadge": "участник",
+  "membersTitle": "Участники",
+  "membersSearch": "Поиск участников",
+  "membersAddTitle": "Добавить участников",
+  "membersInviteLink": "Пригласить по ссылке",
+  "membersAddButton": "Добавить участника",
+  "membersAdded": "{name} добавлен(а)",
+  "@membersAdded": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "membersNotFound": "Не найден",
+  "membersKick": "Исключить",
+  "membersMakeAdmin": "Назначить администратором",
+  "membersRemoveAdmin": "Снять администратора",
+  "admins": "Администраторы",
+  "members": "Участники",
+  "adminsTitle": "Администраторы",
+  "adminsAdd": "Добавить администратора",
+  "adminsDescription": "Администраторы могут добавлять участников, менять название и описание группы.",
+  "adminsSearchHint": "Имя или @никнейм",
+  "adminsNotFound": "Не найдено",
+  "adminsRemove": "Снять",
+  "adminsPromoted": "{name} назначен(а) администратором",
+  "@adminsPromoted": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "createGroupTitle": "Новая группа",
+  "createGroupNameHint": "Название группы",
+  "createGroupNameEmpty": "Введите название группы",
+  "createGroupSearchHint": "Поиск по имени или @никнейму",
+  "createGroupAddMembers": "Добавить участников",
+  "createGroupSubmit": "Создать группу",
+  "createGroupNotFound": "Не найден",
+  "comingSoon": "{label} — скоро",
+  "@comingSoon": {
+    "placeholders": {
+      "label": {
+        "type": "String"
+      }
+    }
+  },
+  "galleryTitle": "Галерея",
+  "gallerySelectPhoto": "Выберите фото",
+  "galleryNoAlbums": "Нет альбомов",
+  "galleryNoPhotos": "Нет фотографий",
+  "galleryNoFavorites": "Нет избранных фото",
+  "galleryNoAccess": "Нет доступа к галерее",
+  "gallerySaveAll": "Все {count} фото",
+  "@gallerySaveAll": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "gallerySaveChoice": "Сохранить только это или все?",
+  "gallerySaveOnlyCurrent": "Только это",
+  "gallerySavedCount": "Сохранено {count} файлов",
+  "@gallerySavedCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "galleryCropTitle": "Обрежьте фото",
+  "attachSheetTitle": "Прикрепить",
+  "attachGallery": "Галерея",
+  "attachMusic": "Музыка",
+  "attachMusicEmpty": "Музыкальные файлы не найдены",
+  "attachMusicTrack": "Трек",
+  "attachFile": "Файл",
+  "attachFileChoose": "Выберите файл",
+  "attachFileOpen": "Открыть файл",
+  "attachGeo": "Геопозиция",
+  "attachGeoDetect": "Определить местоположение",
+  "attachGeoTap": "Нажмите, чтобы определить",
+  "attachGeoDetecting": "Определяю местоположение...",
+  "attachGeoFailed": "Не удалось определить местоположение",
+  "attachGeoDenied": "Доступ к геолокации запрещён. Разрешите в настройках.",
+  "authorTagWebhook": "ВЕБХУК",
+  "@authorTagWebhook": {
+    "description": "Метка у имени автора сообщения, написанного вебхуком (как BOT/APP у Discord)"
+  },
+  "attachTooMany": "В одном сообщении — не больше {count} фото и видео",
+  "@attachTooMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "dropFilesSkipped": "Пропущено файлов: {count}",
+  "@dropFilesSkipped": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "fileDownloadError": "Не удалось скачать файл",
+  "fileServerError": "Ошибка сервера {code}",
+  "@fileServerError": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "fileNoApp": "Нет приложения для открытия этого файла",
+  "settingsTitle": "Настройки",
+  "userSettingsBillingGroup": "Подписка",
+  "userSettingsAppGroup": "Настройки приложения",
+  "glitchPlusSubscriptionTitle": "Подписка",
+  "notifGeneralTitle": "Общие",
+  "notifAllDesc": "Выключите, чтобы не получать никаких уведомлений.",
+  "notifChatsTitle": "Чаты",
+  "notifPersonal": "Личные чаты",
+  "notifPersonalDesc": "Новые сообщения в личных чатах.",
+  "notifGroups": "Группы",
+  "notifGroupsDesc": "Новые сообщения в группах.",
+  "userSettingsGroup": "Настройки пользователя",
+  "userSettingsAccount": "Учётная запись",
+  "accountInfoTitle": "Информация об учётной записи",
+  "accountUsername": "Имя пользователя",
+  "accountShow": "Показать",
+  "accountHide": "Скрыть",
+  "accountSecurityTitle": "Пароль и безопасность",
+  "accountPassword": "Пароль",
+  "accountSessions": "Активные сеансы",
+  "accountSessionsCount": "{count, plural, one{{count} устройство} few{{count} устройства} other{{count} устройств}}",
+  "@accountSessionsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "privacyTitle": "Политика конфиденциальности",
+  "privacyPublicProfile": "Публичный профиль",
+  "privacyShowActivity": "Показывать активность",
+  "privacyPolicyRow": "Политика конфиденциальности",
+  "privacyVisibilityTitle": "Видимость",
+  "privacyPublicProfileDesc": "Вас можно найти через поиск людей по нику и имени.",
+  "privacyShowActivityDesc": "Другие видят, что вы в сети и когда заходили последний раз.",
+  "privacyDocsTitle": "Документы",
+  "languageSelectTitle": "Выберите язык",
+  "aboutDescription": "Glitch — создан командой российских разработчиков как современная платформа для общения в играх с простым, но богатым функционалом, надёжной защитой персональных данных и высокой скоростью работы.",
+  "aboutContactTitle": "Связаться с нами",
+  "aboutSite": "Сайт",
+  "aboutSupportEmail": "Почта поддержки",
+  "userSettingsFolders": "Папки чатов",
+  "foldersMineTitle": "Мои папки",
+  "errorNoConnection": "Нет подключения к серверу",
+  "errorValidation": "Ошибка валидации",
+  "errorUpload": "Ошибка загрузки",
+  "errorUploadDetail": "Ошибка загрузки: {error}",
+  "@errorUploadDetail": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorServer": "Ошибка сервера",
+  "errorServerTimeout": "Сервер не отвечает. Проверьте соединение",
+  "errorTimeout": "Превышено время ожидания. Попробуй ещё раз",
+  "errorServerStatus": "Сервер вернул ошибку ({code})",
+  "@errorServerStatus": {
+    "placeholders": {
+      "code": {
+        "type": "int"
+      }
+    }
+  },
+  "errorBadResponse": "Не удалось обработать ответ сервера. Проверьте соединение",
+  "errorRateLimited": "Слишком много попыток. Подождите минуту",
+  "gifSearchHint": "Поиск GIF",
+  "gifRecent": "Недавние",
+  "gifCategories": "Категории",
+  "contentTabEmoji": "Эмодзи",
+  "contentTabStickers": "Стикеры",
+  "contentTabGif": "Гифки",
+  "emojiSearchHint": "Найдите идеальный эмодзи",
+  "sticker": "Стикер",
+  "emojiCategoryFaces": "Смайлы и эмоции",
+  "emojiCategoryPeople": "Люди и жесты",
+  "emojiCategoryAnimals": "Животные и природа",
+  "emojiCategoryFood": "Еда и напитки",
+  "emojiCategoryActivities": "Активность и спорт",
+  "emojiCategoryTravel": "Путешествия и места",
+  "emojiCategoryObjects": "Предметы",
+  "emojiCategorySymbols": "Символы",
+  "emojiCategoryFlags": "Флаги",
+  "gifNoResults": "Ничего не найдено",
+  "glitchPlusDetachCardTitle": "Отвязать карту?",
+  "glitchPlusDetachCardBody": "Сохранённые данные карты будут удалены. Автопродление подписки остановится — оформить заново можно будет в любой момент.",
+  "glitchPlusDetachConfirm": "Отвязать",
+  "glitchPlusActiveTitle": "Подписка активна",
+  "glitchPlusActiveUntilFixed": "Действует до {date}, дальше не продлевается",
+  "@glitchPlusActiveUntilFixed": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "glitchPlusAutoRenewUntil": "Автопродление до {date}",
+  "@glitchPlusAutoRenewUntil": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "glitchPlusEnableAutoRenew": "Включить автопродление",
+  "glitchPlusCancelAutoRenew": "Отменить автопродление",
+  "glitchPlusDetachCardButton": "Отвязать карту",
+  "glitchPlusPerksTitle": "Что даёт подписка",
+  "glitchPlusPerkGifTitle": "GIF-аватарки",
+  "glitchPlusPerkGifDesc": "Анимированная аватарка в профиле и группах, где ты владелец",
+  "glitchPlusPerkBadgeTitle": "Бейдж Glitch+",
+  "glitchPlusPerkBadgeDesc": "Отметка рядом с именем",
+  "glitchPlusPerkLimitsTitle": "Увеличенные лимиты",
+  "soon": "Скоро",
+  "glitchPlusPriceMonth": "{price} ₽ / месяц",
+  "@glitchPlusPriceMonth": {
+    "placeholders": {
+      "price": {
+        "type": "int"
+      }
+    }
+  },
+  "glitchPlusAutoRenewNote": "Автопродление, отменить можно в любой момент",
+  "glitchPlusSubscribeButton": "Оформить подписку",
+  "glitchPlusGifPromoTitle": "GIF-аватарки — в Glitch+",
+  "glitchPlusGifPromoBody": "Анимированные аватарки доступны с подпиской Glitch+.",
+  "glitchPlusPromoConfirm": "Оформить",
+  "edited": "изменено",
+  "editingTitle": "Редактирование",
+  "reply": "Ответить",
+  "forward": "Переслать",
+  "chatsDeleteTitle": "{count, plural, one{Удалить чат?} few{Удалить {count} чата?} other{Удалить {count} чатов?}}",
+  "@chatsDeleteTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "chatsDeleteHideLine": "• Переписка сохранится — чат вернётся, когда придёт новое сообщение.",
+  "chatsDeleteLeaveLine": "• Выход из группы.",
+  "chatsDeleteOwnedLine": "• Вы владелец: будет удалено навсегда у всех участников.",
+  "chatsDeleteAlsoFor": "Также удалить у {name}",
+  "@chatsDeleteAlsoFor": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "glitchPlusActivated": "Glitch+ активирован",
+  "glitchPlusPaymentPending": "Оплата ещё обрабатывается — попробуй обновить через минуту",
+  "glitchPlusPaymentCheckFailed": "Не удалось подтвердить оплату",
+  "galleryTabRecent": "Недавние",
+  "galleryTabAlbums": "Альбомы",
+  "galleryTabFavorites": "Избранное",
+  "galleryOpenSettings": "Открыть настройки",
+  "galleryLoadFailed": "Не удалось открыть галерею",
+  "galleryLimitedNotice": "Показаны только выбранные вами фото",
+  "galleryLimitedAction": "Выбрать ещё",
+  "photosCount": "{count, plural, one{{count} фото} few{{count} фото} other{{count} фото}}",
+  "@photosCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "attachPhoto": "Фото",
+  "attachAlbum": "Альбом",
+  "attachVideo": "Видео",
+  "attachVoice": "Голосовое",
+  "forwarded": "Переслано",
+  "forwardTitle": "Переслать",
+  "forwardSearchHint": "Поиск людей, групп и каналов",
+  "forwardSubtitle": "Выберите, куда переслать это сообщение.",
+  "forwardNoteHint": "Добавить сообщение (необязательно)",
+  "forwardDone": "Переслано",
+  "forwardFailed": "Не удалось переслать: {places}",
+  "@forwardFailed": {
+    "placeholders": {
+      "places": {
+        "type": "String"
+      }
+    }
+  },
+  "forwardPreviewMany": "Сообщений: {count}",
+  "@forwardPreviewMany": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "callRinging": "Вызов…",
+  "callIncoming": "Входящий вызов",
+  "callConnecting": "Соединение…",
+  "callReconnecting": "Переподключение…",
+  "voiceAudioBlocked": "Звук на паузе — нажмите, чтобы включить",
+  "callEnded": "Вызов завершён",
+  "callAudioInput": "Устройство ввода",
+  "callAudioOutput": "Устройство вывода",
+  "callAudioVolume": "Громкость звука",
+  "callAudioDeviceDefault": "По умолчанию",
+  "callAccept": "Принять",
+  "callDecline": "Отклонить",
+  "callMissed": "Пропущенный вызов",
+  "callDeclined": "Отклонённый вызов",
+  "callCancelled": "Отменённый вызов",
+  "callFailed": "Несостоявшийся вызов",
+  "callOutgoing": "Исходящий вызов",
+  "callAudio": "Аудио",
+  "callErrorBusy": "Абонент занят",
+  "callErrorBlocked": "Звонок недоступен",
+  "callErrorNoAccess": "Звонок недоступен",
+  "callErrorAlreadyInCall": "Вы уже в разговоре",
+  "callErrorTooOften": "Слишком много вызовов, подождите немного",
+  "callErrorNoMicrophone": "Нужен доступ к микрофону",
+  "callErrorNotConnected": "Не удалось начать разговор",
+  "permissionsTitle": "Разрешения",
+  "permissionsSubtitle": "Что приложению разрешено на этом телефоне. Нажмите на пункт, чтобы открыть системную настройку — выдаёт и отбирает разрешения только Android.",
+  "permissionsBasic": "Основные",
+  "permissionsForCalls": "Для звонков",
+  "permNotifications": "Уведомления",
+  "permNotificationsHint": "Сообщения и входящие вызовы",
+  "permMicrophone": "Микрофон",
+  "permMicrophoneHint": "Звонки и голосовые сообщения",
+  "permCamera": "Камера",
+  "permCameraHint": "Съёмка фото и видео, сканер QR-кода",
+  "permGallery": "Фото и видео",
+  "permGalleryHint": "Отправка файлов из галереи",
+  "permLocation": "Геолокация",
+  "permLocationHint": "Отправка своего местоположения",
+  "permBackground": "Работа в фоне",
+  "permBackgroundHint": "Без неё звонок не дойдёт, когда приложение закрыто",
+  "permFullScreen": "Вызов на весь экран",
+  "permFullScreenHint": "Показывать звонок поверх заблокированного экрана",
+  "permLockScreen": "Показ на экране блокировки",
+  "permLockScreenHint": "Без него вызов показывается плашкой вместо полного экрана. В вашей прошивке выключен по умолчанию — проверить нельзя, откройте и включите.",
+  "permAutostart": "Автозапуск",
+  "permAutostartHint": "Ваша прошивка выключает приложения в фоне. Проверить это приложение не может — откройте и включите вручную.",
+  "callErrorGone": "Вызов уже завершён",
+  "callErrorOtherDevice": "Вы подключились к звонку с другого устройства",
+  "groupCallJoin": "Присоединиться",
+  "groupCallTitle": "Групповой звонок",
+  "voiceConnected": "Голосовая связь",
+  "voiceConnecting": "Подключение…",
+  "voiceDisconnect": "Отключиться",
+  "voiceChannelFull": "Канал заполнен",
+  "voiceUnavailable": "Голосовой сервер недоступен, попробуйте позже",
+  "voiceNoAccess": "Нет доступа к каналу",
+  "voiceOtherDevice": "Вы подключились к голосу с другого устройства",
+  "voiceRemoved": "Вы отключены от голосового канала",
+  "voiceLost": "Связь с голосовым каналом потеряна",
+  "voiceServerMute": "Заглушить на сервере",
+  "voiceServerDeafen": "Отключить звук на сервере",
+  "voiceDisconnectMember": "Отключить",
+  "voiceDisconnectedByModerator": "Модератор отключил вас от голосового канала",
+  "voiceSpeakBlocked": "В этом канале вам нельзя говорить",
+  "voiceScreenSoundDropped": "Экран показан без звука: ваш браузер не может передать звук всего экрана без эха у собеседников. Чтобы показать со звуком, выберите вкладку браузера",
+  "voiceHearBlocked": "Модератор отключил вам звук",
+  "voiceNoiseUnavailable": "Шумоподавление недоступно на этом устройстве",
+  "voiceNoiseTitle": "Шумоподавление",
+  "voiceNoiseDescription": "Убирает фоновые звуки — клавиатуру, вентилятор, хлопки в ладоши, — и собеседники слышат только ваш голос.",
+  "voiceMicTestTitle": "Проверка микрофона",
+  "voiceMicTestStart": "Проверка",
+  "voiceMicTestStop": "Остановить",
+  "voiceMicTestFailed": "Не удалось открыть микрофон для проверки",
+  "userSettingsVoice": "Голос и видео",
+  "voiceSettingsVoiceTitle": "Голос",
+  "voiceSettingsMic": "Микрофон",
+  "voiceSettingsSpeaker": "Динамик",
+  "voiceSettingsMicVolume": "Громкость микрофона",
+  "voiceSettingsSpeakerVolume": "Громкость динамика",
+  "voiceCameraTitle": "Камера",
+  "voiceCameraTest": "Проверить видео",
+  "voiceCameraTestStop": "Остановить видео",
+  "voiceCameraNone": "Нет видеоустройств",
+  "voiceCameraFailed": "Не удалось включить камеру. Проверьте, что она подключена, не занята другой программой и доступ к ней разрешён.",
+  "voiceProcessingTitle": "Обработка голоса",
+  "voiceEchoTitle": "Эхоподавление",
+  "voiceEchoDescription": "Убирает из микрофона звук ваших динамиков, чтобы собеседники не слышали сами себя.",
+  "voiceAgcTitle": "Автоматическая регулировка усиления",
+  "voiceAgcDescription": "Сама выравнивает громкость микрофона: тихий голос делает громче, громкий — тише.",
+  "voicePttTitle": "Режим рации",
+  "voicePttDescKey": "Вас слышно, только пока вы держите горячую клавишу рации.",
+  "voicePttDescButton": "Вас слышно, только пока вы держите кнопку «Удерживайте, чтобы говорить».",
+  "voicePttKey": "Горячая клавиша для режима рации",
+  "keybindNone": "Не назначена",
+  "keybindRecording": "Нажмите сочетание клавиш…",
+  "keybindChange": "Изменить горячую клавишу",
+  "keybindStop": "Остановить запись",
+  "voicePttNoKey": "Назначьте горячую клавишу — без неё в режиме рации вас не слышно.",
+  "voicePttBrowser": "В браузере рация работает, только пока вкладка Glitch открыта и активна.",
+  "voicePttDelay": "Задержка отключения в режиме рации",
+  "voicePttDelayMs": "{ms} мс",
+  "@voicePttDelayMs": {"placeholders": {"ms": {"type": "int"}}},
+  "voicePushToTalkHold": "Удерживайте, чтобы говорить",
+  "keybindReserved": "Это сочетание уже занято перезагрузкой или масштабом",
+  "keybindTaken": "Это сочетание уже назначено",
+  "userSettingsKeybinds": "Горячие клавиши",
+  "userSettingsSounds": "Звуки",
+  "soundPreview": "Прослушать звук",
+  "soundsGroupMessages": "Сообщения",
+  "soundsGroupCalls": "Звонки",
+  "soundsGroupMicAndSound": "Микрофон и звук",
+  "soundsGroupVoiceAndVideo": "Голос и видео",
+  "soundsQuoted": "«{name}»",
+  "soundsAndOthers": "{list} и другие",
+  "soundMessage": "Сообщение",
+  "soundDeafen": "Откл. звук",
+  "soundUndeafen": "Вкл. звук",
+  "soundMicOff": "Откл. микрофон",
+  "soundMicOn": "Вкл. микрофон",
+  "soundConnected": "Подключение к голосу",
+  "soundDisconnected": "Отключение от голоса",
+  "soundMoved": "Вас переместили",
+  "soundPttOn": "Включение рации",
+  "soundPttOff": "Отключение рации",
+  "soundStreamOn": "Включение видео или экрана",
+  "soundStreamOff": "Выключение видео или экрана",
+  "soundRingtone": "Входящий звонок",
+  "soundRingback": "Исходящий звонок",
+  "keybindsDescription": "Сочетания работают, пока открыт Glitch, а в программе для Windows — и поверх других окон и игр. Режим рации работает только в голосовом канале или звонке.",
+  "keybindsBrowserFixed": "В браузере перезагрузка и масштаб — его собственные сочетания. Поменять их можно в программе Glitch для Windows.",
+  "keybindUnsupported": "Для этого действия нужна одна клавиша — можно вместе с Ctrl, Shift, Alt или Win",
+  "keybindActionPushToTalk": "Режим рации",
+  "keybindActionToggleMute": "Вкл./выкл. микрофон",
+  "keybindActionToggleDeafen": "Вкл./выкл. звук",
+  "keybindActionEditLastMessage": "Изменить последнее сообщение",
+  "keybindActionReload": "Перезагрузить Glitch",
+  "keybindActionZoomIn": "Увеличить масштаб",
+  "keybindActionZoomOut": "Уменьшить масштаб",
+  "keybindActionZoomReset": "Обычный масштаб",
+  "voiceSensitivityTitle": "Чувствительность ввода",
+  "voiceSensitivityAuto": "Автоматически определять чувствительность ввода",
+  "voiceSensitivityAutoDesc": "Glitch сам подстраивает порог под шум вокруг: когда вы молчите, собеседникам уходит тишина.",
+  "voiceSensitivityManualDesc": "Вас слышно, только когда голос громче отметки — на зелёной части полосы.",
+  "voiceSensitivityDb": "{db} дБ",
+  "@voiceSensitivityDb": {"placeholders": {"db": {"type": "int"}}},
+  "voiceUserVolume": "Громкость пользователя",
+  "voiceUserMute": "Отключить звук",
+  "voiceStreamVolume": "Громкость стрима",
+  "voiceStreamMute": "Заглушить",
+  "voiceStopStream": "Прекратить стрим",
+  "voiceChangeStreamSource": "Изменить источник",
+  "voiceStopWatching": "Прекратить просмотр",
+  "voiceMemberProfile": "Профиль",
+  "voiceMemberWrite": "Написать",
+  "voiceBadgeScreen": "ЭКРАН",
+  "voiceBadgeCamera": "КАМЕРА",
+  "voiceWatchStream": "Смотреть стрим",
+  "streamPreviewTitle": "Сейчас стримит",
+  "@streamPreviewTitle": {"description": "Заголовок окна показа при наведении на человека в голосовом канале (как «Сейчас стримит» у Discord)"},
+  "voicePingAverage": "Средняя задержка:",
+  "voicePingLast": "Последняя задержка:",
+  "voicePingMs": "{ms} мс",
+  "@voicePingMs": {
+    "placeholders": {
+      "ms": {
+        "type": "int"
+      }
+    }
+  },
+  "voicePingMeasuring": "Измеряем задержку…",
+  "voicePingHint": "При задержке 250 мс и больше голос может отставать. Если это не проходит, отключитесь и подключитесь снова.",
+  "voiceDebug": "Отладка",
+  "voiceDebugApp": "Версия Glitch",
+  "voiceDebugCameras": "Камеры",
+  "voiceDebugVideo": "Видео",
+  "voiceDebugColDecoder": "Расшифровка",
+  "voiceDebugColReceived": "Получено, кадр/с",
+  "voiceDebugColEncoder": "Сжатие",
+  "voiceDebugColEncoded": "Сжато, кадр/с",
+  "voiceDebugColCaptured": "Снято, кадр/с",
+  "voiceDebugCaptureDetails": "Захват экрана",
+  "voiceDebugCaptureBackend": "Способ захвата",
+  "voiceDebugCaptureMode": "Режим запуска",
+  "voiceDebugCaptureAudio": "Источник звука",
+  "voiceDebugCaptureModeInstalled": "установленная программа",
+  "voiceDebugCaptureModeDev": "запуск из исходников",
+  "voiceDebugCaptureInputFps": "Кадры от Windows, кадр/с",
+  "voiceDebugCapturePreparedFps": "Подготовлено, кадр/с",
+  "voiceDebugCaptureSentFps": "Передано в Electron, кадр/с",
+  "voiceDebugCaptureAvgPrepare": "Подготовка на GPU, средняя, мс",
+  "voiceDebugCaptureFrameGap": "Интервал кадров Windows, макс. за минуту, мс",
+  "voiceDebugCapturePaced": "Пропущено по заданному FPS, всего",
+  "voiceDebugCaptureNoSlot": "Пропущено без буфера, всего",
+  "voiceDebugCaptureReplaced": "Заменено свежим кадром, всего",
+  "voiceDebugCaptureSendDropped": "Пропущено при занятой передаче, всего",
+  "voiceDebugCaptureConfigured": "Заданный FPS",
+  "voiceDebugCaptureAttempts": "Попытки захвата, в секунду",
+  "voiceDebugCaptureLowest": "Минимум снято, мин",
+  "voiceDebugCaptureAcquire": "Получение кадра, макс. за минуту, мс",
+  "voiceDebugCapturePrepare": "Подготовка после получения, макс. за минуту, мс",
+  "voiceDebugCaptureInterval": "Интервал между попытками, макс. за минуту, мс",
+  "voiceDebugCaptureEncode": "Сжатие кадра, мс",
+  "voiceDebugColChannel": "Канал, кбит/с",
+  "voiceDebugColTarget": "Цель, кбит/с",
+  "voiceDebugColCodec": "Кодек",
+  "voiceDebugColConceal": "Заикания",
+  "voiceDebugColDelay": "Задержка, мс",
+  "voiceDebugColDropped": "Пропущено кадров",
+  "voiceDebugColFreezes": "Подвисания",
+  "voiceDebugColJitter": "Джиттер, мс",
+  "voiceDebugColKbps": "Скорость, кбит/с",
+  "voiceDebugColLayers": "Слои",
+  "voiceDebugColLimit": "Ограничение",
+  "voiceDebugColLink": "Связь",
+  "voiceDebugColLoss": "Потери",
+  "voiceDebugColName": "Участник",
+  "voiceDebugColSize": "Разрешение",
+  "voiceDebugColSound": "Звук",
+  "voiceDebugCopy": "Скопировать",
+  "voiceDebugCpu": "процессор",
+  "voiceDebugDefaultDevice": "по умолчанию",
+  "voiceDebugDevice": "Устройство",
+  "voiceDebugGeneral": "Общее",
+  "voiceDebugGpu": "видеокарта",
+  "voiceDebugInput": "Микрофон",
+  "voiceDebugInVoice": "В голосе",
+  "voiceDebugLimitBandwidth": "интернет",
+  "voiceDebugLimitCpu": "процессор",
+  "voiceDebugLimitNone": "нет",
+  "voiceDebugLimitOther": "другое",
+  "voiceDebugMicOff": "микрофон выключен",
+  "voiceDebugNo": "нет",
+  "voiceDebugNoCameras": "Ни у кого не включена камера",
+  "voiceDebugNoise": "Шумоподавление",
+  "voiceDebugNoScreens": "Никто не показывает экран",
+  "voiceDebugNotReceiving": "не получаете",
+  "voiceDebugOff": "выключено",
+  "voiceDebugOn": "включено",
+  "voiceDebugOutput": "Динамик",
+  "voiceDebugPeople": "Участники",
+  "voiceDebugPlace": "Где",
+  "voiceDebugQualityExcellent": "отличная",
+  "voiceDebugQualityGood": "хорошая",
+  "voiceDebugQualityLost": "потеряна",
+  "voiceDebugQualityPoor": "плохая",
+  "voiceDebugReconnects": "Переподключений",
+  "voiceDebugRoute": "Соединение",
+  "voiceDebugRouteDirect": "напрямую к серверу",
+  "voiceDebugRouteRelay": "через ретранслятор к серверу",
+  "voiceDebugScreens": "Демонстрации экрана",
+  "voiceDebugServer": "Медиасервер",
+  "voiceDebugUnavailable": "недоступно",
+  "voiceDebugYes": "есть",
+  "voiceDebugYou": "(вы)",
+  "voiceDebugSubLink": "Связь",
+  "voiceDebugSubVoice": "Голос",
+  "voiceDebugSubDevice": "Устройство и приложение",
+  "voiceDebugColPing": "Задержка, мс",
+  "voiceDebugColPingAvg": "Средняя, мс",
+  "voiceDebugColSend": "Отправка, кбит/с",
+  "voiceDebugColRecv": "Приём, кбит/с",
+  "voiceDebugNoAnswer": "нет ответа",
+  "voiceRoomEmpty": "Сейчас в голосовом канале никого нет",
+  "voiceRoomJoin": "Присоединиться к голосовому каналу",
+  "voiceRoomInvite": "Пригласить в голосовой канал",
+  "callErrorInternal": "Не удалось начать звонок",
+  "messageUnsupported": "Это сообщение не поддерживается вашей версией Glitch. Обновите приложение, чтобы его увидеть.",
+  "messageUnsupportedShort": "Неподдерживаемое сообщение",
+  "callTitle": "Звонок",
+  "callOngoing": "Активный звонок",
+  "callEndConversation": "Завершить разговор",
+  "servers": "Сообщества",
+  "serverNoRooms": "Нет доступных каналов",
+  "serverCreate": "Создать сообщество",
+  "serverCreateNameHint": "Название сообщества",
+  "serverCreateNameEmpty": "Введите название сообщества",
+  "roomCreateTitle": "Новый канал",
+  "roomCreateNameHint": "Название канала",
+  "roomCreateNameEmpty": "Введите название канала",
+  "roomCreateKindText": "Текстовый",
+  "roomCreateKindVoice": "Голосовой",
+  "categoryCreateTitle": "Новая категория",
+  "categoryCreateNameHint": "Название категории",
+  "categoryCreateNameEmpty": "Введите название категории",
+  "roomCreateWindowTitle": "Создать канал",
+  "categoryCreateWindowTitle": "Создать категорию",
+  "roomCreateKind": "Тип канала",
+  "roomCreateKindTextDesc": "Сообщения, изображения, GIF, эмодзи и стикеры",
+  "roomCreateKindVoiceDesc": "Общение голосом, видео и показ экрана",
+  "roomCreateNameLabel": "Название канала",
+  "categoryCreateNameLabel": "Название категории",
+  "roomCreatePrivateDesc": "Только выбранные участники и роли смогут видеть этот канал.",
+  "categoryCreatePrivateDesc": "Только выбранные участники и роли смогут видеть эту категорию и её синхронизированные каналы.",
+  "roomCreateSubmit": "Создать канал",
+  "categoryCreateSubmit": "Создать категорию",
+  "inviteTitle": "Пригласить в {name}",
+  "@inviteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "inviteSearchHint": "Кому отправить",
+  "inviteSend": "Пригласить",
+  "inviteSent": "Отправлено",
+  "inviteCreate": "Создать ссылку",
+  "inviteRevoke": "Отозвать",
+  "inviteNoLinks": "Пока нет ни одной ссылки",
+  "inviteNoChats": "Некому отправить — у вас пока нет переписок",
+  "serverJoinButton": "Вступить",
+  "inviteDaysLeft": "Действует ещё {days} дн.",
+  "@inviteDaysLeft": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteForever": "Бессрочная",
+  "inviteUses": "Входов: {count}",
+  "@inviteUses": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "inviteMenu": "Пригласить людей",
+  "invitesColCreator": "Приглашающий",
+  "invitesColCode": "Код приглашения",
+  "invitesColUses": "Использований",
+  "invitesColExpires": "Истекает",
+  "inviteCopyLink": "Скопировать ссылку",
+  "inviteRevokeTitle": "Отозвать ссылку-приглашение?",
+  "inviteRevokeBody": "По ней больше нельзя будет войти.",
+  "inviteRevokeDone": "Ссылка отозвана",
+  "serverSettings": "Настройки сообщества",
+  "serverSettingsProfile": "Профиль сообщества",
+  "serverSettingsMembers": "Участники",
+  "serverSettingsRoles": "Роли",
+  "invitesTitle": "Приглашения",
+  "serverSettingsBans": "Баны",
+  "serverSettingsDelete": "Удалить сообщество",
+  "serverDeleteTitle": "Удалить «{name}»?",
+  "@serverDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverDeleteBody": "Сообщество удалится навсегда у всех участников — вместе со всеми каналами, перепиской, файлами, ролями и стикерами. Отменить это нельзя.",
+  "serverDeleteNameLabel": "Введите название сообщества",
+  "serverDeleteMismatch": "Название введено неверно",
+  "serverDeletedToast": "Сообщество «{name}» удалено",
+  "@serverDeletedToast": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverSettingsGroupPeople": "Люди",
+  "serverSettingsGroupModeration": "Модерация",
+  "serverProfileSubtitle": "Настройте отображение вашего сервера, включая карточку в ссылках-приглашениях и в каталоге серверов, если у вас сервер публичный.",
+  "serverProfileName": "Название",
+  "serverProfileDescription": "Описание",
+  "serverProfileDescriptionHint": "Зачем людям вступать в это сообщество?",
+  "serverProfileDescriptionPlaceholder": "Расскажите о сообществе",
+  "serverProfileSaved": "Профиль сохранён",
+  "unsavedChangesTitle": "Есть несохранённые изменения",
+  "unsavedChangesReset": "Сбросить",
+  "bannerCropTitle": "Обрезка баннера",
+  "glitchPlusGifBannerTitle": "GIF-баннеры — в Glitch+",
+  "glitchPlusGifBannerBody": "Анимированные баннеры — профиля и сообществ — доступны с подпиской Glitch+.",
+  "serverCreatedAt": "Создано: {date}",
+  "@serverCreatedAt": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "serverProfileAddBanner": "Добавить баннер",
+  "serverProfileImagesHint": "Нажмите на баннер или логотип, чтобы сменить. Рекомендуемый размер баннера — 1500×400, анимированный GIF — с Glitch+.",
+  "serverProfileGames": "Игры",
+  "serverProfileGamesHint": "В какие игры играют участники вашего сервера?",
+  "serverProfilePrivacy": "Приватность",
+  "serverProfilePrivacyHint": "Кто сможет найти сообщество. На вход по приглашению это не влияет.",
+  "serverProfilePublic": "Открытое",
+  "serverProfilePublicHint": "Сообщество можно будет найти в каталоге Glitch.",
+  "serverProfilePrivate": "Закрытое",
+  "serverProfilePrivateHint": "В каталоге его не будет — только по ссылке-приглашению.",
+  "serverProfileGamesSearch": "Поиск игры…",
+  "serverProfileGamesNotFound": "Такой игры нет в списке",
+  "serverProfileGamesCount": "Выбрано {count} из {max}",
+  "@serverProfileGamesCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      },
+      "max": {
+        "type": "int"
+      }
+    }
+  },
+  "serverMembersSearch": "Поиск по имени или нику",
+  "serverMembersColName": "Имя",
+  "serverMembersColJoined": "В сообществе с",
+  "serverMembersColAccount": "В Glitch с",
+  "serverMembersColInvite": "Способ вступления",
+  "serverMembersColRoles": "Роли",
+  "serverMembersInviteUnknown": "Неизвестно",
+  "serverMembersEmpty": "Никого не найдено",
+  "serverMembersJoinedLine": "В сообществе с {date}",
+  "@serverMembersJoinedLine": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "serverMemberKick": "Выгнать",
+  "serverMemberBan": "Забанить",
+  "copyIdUser": "Копировать ID пользователя",
+  "copyIdGroup": "Копировать ID группы",
+  "copyIdServer": "Копировать ID сообщества",
+  "copyIdChannel": "Копировать ID канала",
+  "copyIdCategory": "Копировать ID категории",
+  "copyIdRole": "Копировать ID роли",
+  "inviteCardServer": "Вас пригласили в сообщество",
+  "inviteCardGroup": "Вас пригласили в группу",
+  "inviteCardInvalid": "Приглашение недействительно",
+  "inviteCardInvalidHint": "Срок ссылки истёк, или её отозвали",
+  "inviteCardJoin": "Вступить",
+  "inviteCardOpen": "Перейти",
+  "vanityTitle": "Собственный адрес",
+  "vanityHint": "Постоянная ссылка-приглашение со словом, которое вы выбрали сами. Без срока и без лимита входов. Смените слово — старое освободится для других.",
+  "vanityPlaceholder": "например, my-clan",
+  "vanitySaved": "Адрес сохранён",
+  "vanityRemoved": "Адрес убран",
+  "copyMessageLink": "Копировать ссылку на сообщение",
+  "messageNotFound": "Сообщение не найдено",
+  "copyIdMessage": "Копировать ID сообщения",
+  "idCopied": "ID скопирован",
+  "serverKickTitle": "Выгнать {name}?",
+  "@serverKickTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverKickBody": "Человек сможет вернуться по новому приглашению.",
+  "serverKickDone": "Участник выгнан",
+  "serverBanTitle": "Забанить {name}?",
+  "@serverBanTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverBanBody": "Человек будет исключён и не сможет вернуться, пока бан не снимут.",
+  "serverBanReason": "Причина",
+  "serverBanReasonHint": "Необязательно. Видна только модераторам.",
+  "serverBanDone": "Участник забанен",
+  "serverBansEmpty": "Забаненных нет",
+  "serverUnban": "Разбанить",
+  "serverUnbanTitle": "Снять бан с {name}?",
+  "@serverUnbanTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverUnbanBody": "Вернуться человек сможет только по приглашению.",
+  "serverUnbanDone": "Бан снят",
+  "serverBannedBy": "Забанил(а): {name}",
+  "@serverBannedBy": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverBanNoReason": "Причина не указана",
+  "serverRemovedToast": "Вы больше не участник сообщества «{name}»",
+  "@serverRemovedToast": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "pageShowing": "Отображается",
+  "pageBack": "Назад",
+  "pageNext": "Далее",
+  "serverMembersOfTotal": "{count, plural, one{из {count} участника} other{из {count} участников}}",
+  "@serverMembersOfTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "serverRolesHint": "Участник виден в цвете своей высшей роли. Перетаскивайте роли, чтобы менять их старшинство.",
+  "serverRolesEmpty": "Ролей пока нет. Все участники пользуются правами роли «Все».",
+  "serverRolesEveryoneTitle": "Роль по умолчанию",
+  "serverRolesNew": "Новая роль",
+  "serverRolesReadOnly": "Эту роль можно только посмотреть: она старше вашей.",
+  "serverRolesName": "Название роли",
+  "serverRolesNameHint": "Например: Модератор",
+  "serverRolesNameRequired": "Введите название роли",
+  "serverRolesColor": "Цвет роли",
+  "serverRolesHoist": "Показывать отдельно",
+  "serverRolesHoistDesc": "Участники с этой ролью будут стоять отдельной группой в списке участников.",
+  "serverRolesMentionable": "Можно упоминать",
+  "serverRolesMentionableDesc": "Любой участник сможет упомянуть эту роль и позвать сразу всех, кто её носит.",
+  "serverRolesPermissions": "Права",
+  "serverRolesPermissionsHint": "Права складываются: участник получает всё, что дают его роли вместе.",
+  "serverRolesDeleteTitle": "Удалить роль «{name}»?",
+  "@serverRolesDeleteTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverRolesDeleteBody": "Роль снимется со всех участников, а её настройки прав в каналах пропадут. Отменить это нельзя.",
+  "permGroupGeneral": "Общение",
+  "permGroupModeration": "Модерация",
+  "permGroupMembers": "Участники",
+  "permGroupVoice": "Голос",
+  "permGroupServer": "Сообщество",
+  "permViewRoom": "Видеть каналы",
+  "permViewRoomDesc": "Без этого права канал не появится в списке вообще.",
+  "permSendMessages": "Писать сообщения",
+  "permSendMessagesDesc": "Отправлять сообщения в текстовые каналы.",
+  "permAttachFiles": "Прикреплять файлы",
+  "permAttachFilesDesc": "Отправлять фото, видео, голосовые и документы.",
+  "permAddReactions": "Ставить реакции",
+  "permAddReactionsDesc": "Отмечать чужие сообщения эмодзи.",
+  "permMentionEveryone": "Упоминать всех",
+  "permMentionEveryoneDesc": "Звать разом всех участников канала. Самое шумное право — выдавайте осторожно.",
+  "permManageMessages": "Управлять сообщениями",
+  "permManageMessagesDesc": "Удалять чужие сообщения и закреплять их.",
+  "permManageRooms": "Управлять каналами",
+  "permManageRoomsDesc": "Создавать, переименовывать и удалять каналы и категории.",
+  "permManageRoles": "Управлять ролями",
+  "permManageRolesDesc": "Создавать роли и выдавать их — но только те, что ниже собственной.",
+  "permCreateInvite": "Приглашать людей",
+  "permCreateInviteDesc": "Выпускать ссылки-приглашения в сообщество.",
+  "permKickMembers": "Выгонять участников",
+  "permKickMembersDesc": "Выгнать человека. Вернуться он сможет по любой живой ссылке.",
+  "permBanMembers": "Банить участников",
+  "permBanMembersDesc": "Забанить человека: он не вернётся даже по свежей ссылке.",
+  "permViewAuditLog": "Смотреть журнал действий",
+  "permViewAuditLogDesc": "Видеть, кто и что сделал в сообществе. Сам журнал ещё не готов.",
+  "permChangeNickname": "Менять своё имя",
+  "permChangeNicknameDesc": "Задать себе отдельное имя в этом сообществе.",
+  "permManageNicknames": "Менять чужие имена",
+  "permManageNicknamesDesc": "Менять имена других участников в этом сообществе.",
+  "permConnect": "Входить в голосовые",
+  "permConnectDesc": "Присоединяться к голосовым каналам.",
+  "permSpeak": "Говорить",
+  "permSpeakDesc": "Включать микрофон в голосовом канале.",
+  "permStream": "Показывать экран и камеру",
+  "permStreamDesc": "Включать демонстрацию экрана и камеру в голосовом канале.",
+  "permSendPolls": "Создавать опросы",
+  "permSendPollsDesc": "Создавать опросы в текстовых каналах.",
+  "permMuteMembers": "Заглушать микрофон",
+  "permMuteMembersDesc": "Выключать микрофон другим в голосовом канале.",
+  "permDeafenMembers": "Заглушать звук",
+  "permDeafenMembersDesc": "Выключать человеку не только микрофон, но и звук.",
+  "permMoveMembers": "Перемещать по каналам",
+  "permMoveMembersDesc": "Переносить участников между голосовыми каналами.",
+  "permManageServer": "Управлять сообществом",
+  "permManageServerDesc": "Менять название, описание, значок, баннер и приватность.",
+  "permAdministrator": "Администратор",
+  "permAdministratorDesc": "Даёт ВСЕ права сразу и обходит настройки отдельных каналов. Выдавайте только тем, кому доверяете полностью.",
+  "serverRolesSubtitle": "Роли объединяют участников и задают, что им можно в сообществе.",
+  "serverRolesSearch": "Поиск роли",
+  "serverRolesNotFound": "Такой роли нет",
+  "rosterTitle": "Участники",
+  "rosterOnline": "В сети",
+  "rosterOffline": "Не в сети",
+  "rosterEmpty": "Здесь пока никого",
+  "rosterTotal": "{count, plural, one{{count} участник} few{{count} участника} other{{count} участников}}",
+  "@rosterTotal": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "rosterMore": "…и ещё {count}",
+  "@rosterMore": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "serverMemberRolesEmpty": "В сообществе пока нет ролей — создайте их в разделе «Роли».",
+  "back": "Назад",
+  "serverRolesTabDisplay": "Отображение",
+  "serverRolesColorHint": "Участник виден в цвете своей высшей роли, у которой задан цвет.",
+  "roomNoReactions": "В этом канале нельзя ставить реакции",
+  "roomSettings": "Настройки канала",
+  "roomSettingsGeneral": "Общее",
+  "roomSettingsDelete": "Удалить канал",
+  "roomDeleteTitle": "Удалить канал?",
+  "roomDeleteBody": "Канал «{name}» и вся переписка в нём исчезнут безвозвратно.",
+  "@roomDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "roomDeleted": "Канал удалён",
+  "roomUnavailable": "Канал больше недоступен",
+  "roomNoSendBanner": "У вас нет права писать в этом канале",
+  "roomGeneralName": "Название канала",
+  "roomGeneralTopic": "Тема канала",
+  "roomGeneralTopicHint": "О чём этот канал",
+  "roomGeneralTopicNote": "Тема видна участникам в шапке канала.",
+  "roomUserLimit": "Лимит участников",
+  "roomUserLimitNone": "Без лимита",
+  "roomUserLimitNote": "Больше этого числа людей в канал не войдёт — даже модераторы.",
+  "roomSaved": "Изменения сохранены",
+  "roomSettingsPermissions": "Права доступа",
+  "permManageRoomPerms": "Управлять правами",
+  "permManageRoomPermsDesc": "Менять права доступа этого канала для ролей.",
+  "placePermsSynced": "Права совпадают с категорией «{name}».",
+  "@placePermsSynced": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "placePermsNotSynced": "Права отличаются от категории «{name}».",
+  "@placePermsNotSynced": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "placePermsSync": "Синхронизировать",
+  "placePermsSyncTitle": "Синхронизировать с категорией?",
+  "placePermsSyncBody": "Права этого канала заменятся правами категории «{name}».",
+  "@placePermsSyncBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryPermsHint": "Каналы, синхронизированные с категорией, получат эти права вместе с ней.",
+  "placePermsRoleLocked": "Эту роль можно только посмотреть: она не младше вашей.",
+  "placePermsSaved": "Права сохранены",
+  "viewAsTitle": "Просмотр сообщества от лица роли",
+  "viewAsDesc": "Позволяет посмотреть, какие каналы и действия доступны этой роли. Доступно только владельцу и администраторам.",
+  "viewAsButton": "Просмотр от лица роли →",
+  "viewAsBanner": "{count, plural, one{Вы просматриваете это сообщество от лица {count} роли} other{Вы просматриваете это сообщество от лица {count} ролей}}",
+  "@viewAsBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "viewAsBannerEveryone": "Вы просматриваете это сообщество от лица @everyone",
+  "viewAsPick": "Выберите роли",
+  "viewAsBack": "Вернуться к настройкам ролей",
+  "viewAsOff": "Отключить",
+  "placePermsAdvanced": "Расширенные права",
+  "placePrivateRoom": "Приватный канал",
+  "placePrivateCategory": "Приватная категория",
+  "placePrivateRoomDesc": "Если сделать канал приватным, его будут видеть только выбранные вами участники и роли.",
+  "placePrivateCategoryDesc": "Если сделать категорию приватной, её будут видеть только выбранные вами участники и роли. Это применится и к синхронизированным каналам категории.",
+  "placePrivateWhoRoom": "Кому доступен этот канал?",
+  "placePrivateWhoCategory": "Кому доступна эта категория?",
+  "placePrivateAdd": "Добавить участников или роли",
+  "placePrivateRoles": "Роли",
+  "placePrivateMembers": "Участники",
+  "placePrivateNoRoles": "Нет ролей",
+  "placePrivateNoMembers": "Нет участников",
+  "placePrivateAlways": "Владелец и администраторы видят приватные каналы и категории всегда.",
+  "placePermsTargets": "Роли и участники",
+  "placePermsAddHint": "Роль или участник",
+  "placePermsAddNothing": "Ничего не найдено",
+  "placePermsRoleTag": "Роль",
+  "placePermsRemoveRole": "Удалить роль",
+  "placePermsRemoveMember": "Удалить участника",
+  "placeSettingsLost": "У вас больше нет доступа к этим настройкам",
+  "categorySettings": "Настройки категории",
+  "categorySettingsDelete": "Удалить категорию",
+  "categoryDeleteTitle": "Удалить категорию?",
+  "categoryDeleteBody": "Категория «{name}» будет удалена. Её каналы останутся и переместятся в общий список.",
+  "@categoryDeleteBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "categoryDeleted": "Категория удалена",
+  "categoryGeneralName": "Название категории",
+  "categoryCollapse": "Свернуть категорию",
+  "categoryExpand": "Развернуть категорию",
+  "categoryCollapseAll": "Свернуть все категории",
+  "serverRolesDeleteButton": "Удалить роль",
+  "memberCardMutualServers": "{count, plural, one{{count} общее сообщество} few{{count} общих сообщества} other{{count} общих сообществ}}",
+  "@memberCardMutualServers": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "memberCardMessageHint": "Сообщение для @{nickname}",
+  "@memberCardMessageHint": {
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "userProfileMutualServersTab": "Общие сообщества",
+  "userProfileMediaTab": "Медиа и файлы",
+  "userProfileNoMutualServers": "Общих сообществ нет",
+  "userProfileNoteLabel": "Заметка (видна только вам)",
+  "userProfileNotePlaceholder": "Нажмите, чтобы добавить заметку",
+  "userProfileMute": "Выключить уведомления",
+  "userProfileUnmute": "Включить уведомления",
+  "userProfileCopyNickname": "Копировать ник",
+  "userProfileTabServers": "Сообщества",
+  "userProfileTabMedia": "Медиа",
+  "userProfileOpenFull": "Полный профиль",
+  "profileEdit": "Редактировать профиль",
+  "profileEditorTitle": "Основной профиль",
+  "profileEditSaved": "Профиль сохранён",
+  "profileEditNameEmpty": "Имя не может быть пустым",
+  "profileCommunityNameLocked": "Нет права менять имя в этом сообществе",
+  "profileFieldReset": "Сбросить",
+  "profileDecorAvatar": "Украшение аватара",
+  "profileDecorEffect": "Эффект профиля",
+  "profileDecorNameplate": "Плашка",
+  "profileDecorCommunityNote": "Оформление общее для всех профилей. Изменить его можно в основном профиле.",
+  "shopTabAll": "Все",
+  "shopTabBundles": "Наборы",
+  "shopTabDecorations": "Украшения аватара",
+  "shopTabEffects": "Эффекты профиля",
+  "shopTabNameplates": "Плашки",
+  "shopKindBundle": "Набор",
+  "shopKindDecoration": "Украшение аватара",
+  "shopKindEffect": "Эффект профиля",
+  "shopKindNameplate": "Плашка",
+  "shopItemsCount": "{count, plural, one{{count} предмет} few{{count} предмета} other{{count} предметов}}",
+  "@shopItemsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "shopOwned": "В коллекции",
+  "shopBuy": "Купить за {price}",
+  "@shopBuy": {
+    "placeholders": {
+      "price": {
+        "type": "String"
+      }
+    }
+  },
+  "shopEquip": "Надеть",
+  "shopEmpty": "Здесь пока ничего нет",
+  "shopExampleButton": "Пример кнопки",
+  "shopPurchased": "Покупка прошла — предметы уже в вашей коллекции",
+  "shopAlreadyHave": "У вас уже есть {have} из {total} — получите недостающее",
+  "@shopAlreadyHave": {
+    "placeholders": {
+      "have": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "serverEditMyProfile": "Изменить профиль сообщества",
+  "serverLeave": "Покинуть сообщество",
+  "serverLeaveTitle": "Покинуть «{name}»?",
+  "@serverLeaveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "serverLeaveBodyPublic": "Вернуться можно будет через каталог сообществ.",
+  "serverLeaveBodyPrivate": "Вернуться можно будет только по новому приглашению.",
+  "serverMemberEditNick": "Изменить имя в сообществе",
+  "serverNickLabel": "Имя в сообществе",
+  "serverNickHint": "Пусто — основное имя",
+  "serverNickDone": "Имя изменено",
+  "catalogTitle": "Каталог",
+  "catalogServers": "Серверы",
+  "catalogEvents": "Мероприятия",
+  "catalogHome": "Главная",
+  "catalogSoon": "Скоро",
+  "catalogSearch": "Поиск",
+  "catalogHeroTitle": "Откройте для себя сообщества по интересам в Glitch",
+  "catalogHeroSubtitle": "Любите игры, музыку или просто общение? Здесь каждый найдёт место для себя.",
+  "catalogPopular": "Популярные сообщества",
+  "catalogResults": "Результаты поиска",
+  "catalogEmpty": "Открытых сообществ пока нет",
+  "catalogNothingFound": "Ничего не нашлось",
+  "catalogOnline": "{count} в сети",
+  "@catalogOnline": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "catalogEventsSubtitle": "Скоро здесь появятся мероприятия сообществ.",
+  "messageStampToday": "Сегодня в {time}",
+  "@messageStampToday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "messageStampYesterday": "Вчера в {time}",
+  "@messageStampYesterday": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "screenShareTitle": "Показ экрана",
+  "screenShareTabApps": "Приложения",
+  "screenShareTabScreens": "Экраны",
+  "screenShareScreenN": "Экран {n}",
+  "@screenShareScreenN": {
+    "placeholders": {
+      "n": {
+        "type": "int"
+      }
+    }
+  },
+  "screenShareSound": "Звук",
+  "screenShareSoundHint": "Собеседники услышат звук компьютера",
+  "screenShareStart": "Начать показ",
+  "screenShareNoWindows": "Нет открытых окон",
+  "screenShareListFailed": "Не удалось получить список окон",
+  "screenShareSourceGone": "Это окно уже закрыто — выберите другое",
+  "voiceScreenSoundDroppedApp": "Экран показан без звука: программа не смогла убрать из него голоса собеседников, и у всех было бы эхо",
+  "desktopAppVersion": "Glitch для Windows {version}",
+  "@desktopAppVersion": {
+    "placeholders": {
+      "version": {
+        "type": "String"
+      }
+    }
+  },
+  "systemSettingsSection": "Система",
+  "systemBehaviorTitle": "Запуск и закрытие",
+  "systemOpenAtLogin": "Запускать Glitch при включении компьютера",
+  "systemOpenAtLoginDesc": "Glitch откроется сам, когда вы войдёте в Windows, и будет ждать в трее.",
+  "systemCloseToTray": "Сворачивать Glitch в трей",
+  "systemCloseToTrayDesc": "Кнопка ✕ сворачивает Glitch в трей, а не закрывает его.",
+  "systemSettingFailed": "Windows не дала изменить настройку",
+  "uploadTooLarge": "Слишком большой файл. Максимум: {limit}",
+  "@uploadTooLarge": {
+    "placeholders": {
+      "limit": {
+        "type": "String"
+      }
+    }
+  },
+  "sizeBytes": "{value} Б",
+  "@sizeBytes": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "sizeKb": "{value} КБ",
+  "@sizeKb": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "sizeMb": "{value} МБ",
+  "@sizeMb": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "sizeGb": "{value} ГБ",
+  "@sizeGb": {
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsTabOnline": "В сети",
+  "friendsTabAll": "Все",
+  "friendsTabPending": "Ожидание",
+  "friendsAdd": "Добавить в друзья",
+  "friendsOnlineCount": "В сети — {count}",
+  "@friendsOnlineCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "friendsAllCount": "Все друзья — {count}",
+  "@friendsAllCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "friendsPendingCount": "Ожидание — {count}",
+  "@friendsPendingCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "friendsIncoming": "Входящий запрос дружбы",
+  "friendsOutgoing": "Исходящий запрос дружбы",
+  "friendsCancelRequest": "Отменить запрос",
+  "friendsRemove": "Удалить из друзей",
+  "friendsRemoveTitle": "Удалить «{name}»",
+  "@friendsRemoveTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsRemoveBody": "Вы уверены, что хотите удалить {name} из друзей?",
+  "@friendsRemoveBody": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsEmptyOnline": "Сейчас никого из друзей нет в сети.",
+  "friendsEmptyAll": "У вас пока нет друзей. Добавьте их по нику.",
+  "friendsEmptyPending": "Запросов дружбы нет.",
+  "friendsAddDesc": "Вы можете добавить друзей по их нику в Glitch.",
+  "friendsAddHint": "Введите ник",
+  "friendsAddSend": "Отправить запрос дружбы",
+  "friendsAddSent": "Запрос дружбы для @{nickname} отправлен.",
+  "@friendsAddSent": {
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsAddBecame": "Теперь вы друзья с @{nickname}.",
+  "@friendsAddBecame": {
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      }
+    }
+  },
+  "friendsIgnoreRequest": "Игнорировать запрос",
+  "userProfileMutualFriendsTab": "Общие друзья",
+  "userProfileTabFriends": "Друзья",
+  "userProfileNoMutualFriends": "Общих друзей нет",
+  "mutualFriendsCount": "{count, plural, one{{count} общий друг} few{{count} общих друга} other{{count} общих друзей}}",
+  "@mutualFriendsCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "notifFriendRequest": "Хочет добавить вас в друзья",
+  "notifFriendAccepted": "Принял(а) ваш запрос дружбы",
+  "privacyFriendRequestsTitle": "Кто может отправлять вам запросы дружбы",
+  "privacyFriendReqEveryone": "Все",
+  "privacyFriendReqEveryoneDesc": "Любой, кто знает ваш ник",
+  "privacyFriendReqFriends": "Друзья друзей",
+  "privacyFriendReqFriendsDesc": "У вас есть общий друг",
+  "privacyFriendReqServers": "Участники сообществ",
+  "privacyFriendReqServersDesc": "Вы состоите в одном сообществе",
+  "voiceDebugGraphPing": "Задержка",
+  "voiceDebugGraphVoice": "Скорость голоса",
+  "voiceDebugKbps": "{kbps} кбит/с",
+  "@voiceDebugKbps": {
+    "placeholders": {
+      "kbps": {
+        "type": "int"
+      }
+    }
+  },
+  "voiceDebugSubSender": "У показывающего",
+  "voiceDebugSubMine": "У меня",
+  "voiceDebugFps": "{fps} кадр/с",
+  "@voiceDebugFps": {
+    "placeholders": {
+      "fps": {
+        "type": "int"
+      }
+    }
+  },
+  "voiceDebugScreenOf": "Экран — {name}",
+  "@voiceDebugScreenOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceDebugCameraOf": "Камера — {name}",
+  "@voiceDebugCameraOf": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "voiceDebugNoVideo": "Никто не показывает экран и не включил камеру",
+  "screenShareResolution": "Разрешение экрана",
+  "screenShareFrameRate": "Частота кадров",
+  "screenShareResolutionSource": "Источник",
+  "screenShareFps": "{fps} FPS",
+  "@screenShareFps": {
+    "placeholders": {
+      "fps": {
+        "type": "int"
+      }
+    }
+  },
+  "screenShareSoundHintWin10": "Учтите, что на Windows 10 звук с демонстрации всего экрана будет не слышен из-за ограничения самого Windows",
+  "attachPoll": "Опрос",
+  "pollCreateTitle": "Создание опроса",
+  "pollQuestion": "Вопрос",
+  "pollQuestionHint": "Какой вопрос вы хотите задать?",
+  "pollAnswers": "Ответы",
+  "pollAnswerHint": "Введите ответ",
+  "pollAddAnswer": "Добавить ещё один ответ",
+  "pollDuration": "Срок",
+  "pollMinutes": "{n} мин.",
+  "@pollMinutes": {"placeholders": {"n": {"type": "int"}}},
+  "pollHours": "{n} ч.",
+  "@pollHours": {"placeholders": {"n": {"type": "int"}}},
+  "pollDays": "{n} дн.",
+  "@pollDays": {"placeholders": {"n": {"type": "int"}}},
+  "pollWeeks": "{n} нед.",
+  "@pollWeeks": {"placeholders": {"n": {"type": "int"}}},
+  "pollAllowMultiple": "Разрешить несколько ответов",
+  "pollPublish": "Публикация",
+  "pollChooseOne": "Выберите один ответ",
+  "pollChooseMany": "Выберите один или несколько ответов",
+  "pollVotes": "{count, plural, one{{count} голос} few{{count} голоса} other{{count} голосов}}",
+  "@pollVotes": {"placeholders": {"count": {"type": "int"}}},
+  "pollShowResults": "Показать итоги",
+  "pollBackToVote": "Вернуться к голосованию",
+  "pollVote": "Проголосовать",
+  "pollRemoveVote": "Отменить голос",
+  "pollEndedLabel": "Опрос завершён",
+  "pollEnd": "Завершить опрос",
+  "pollEndConfirmBody": "Голосование закончится для всех, итоги станут окончательными.",
+  "pollTie": "Ничья",
+  "pollNoVotes": "Никто не проголосовал",
+  "pollOpen": "Открыть опрос",
+  "pollDeleted": "Опрос удалён",
+  "pollPreview": "Опрос: {question}",
+  "@pollPreview": {"placeholders": {"question": {"type": "String"}}},
+  "pollEndedPreview": "Опрос завершён: {question}",
+  "@pollEndedPreview": {"placeholders": {"question": {"type": "String"}}},
+  "pollVotersEmpty": "Этот ответ пока никто не выбрал",
+  "permManageStickers": "Управлять стикерами",
+  "roomSettingsIntegrations": "Интеграции",
+  "integrationsHint": "Подключай к каналу программы и сайты через интеграции. Самое удобное — вебхуки: они публикуют сообщения в данный канал.",
+  "webhooksTitle": "Вебхуки",
+  "webhooksCount": "{count, plural, =0{Нет вебхуков} one{{count} вебхук} few{{count} вебхука} other{{count} вебхуков}}",
+  "@webhooksCount": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "webhooksHint": "Подключай к каналу программы и сайты. Через вебхуки они публикуют сообщения в данный канал.",
+  "webhooksNew": "Новый вебхук",
+  "webhooksEmpty": "Вебхуков пока нет",
+  "webhookDefaultName": "Капитан Хук",
+  "webhookName": "Имя",
+  "webhookNameEmpty": "Введите имя вебхука",
+  "webhookAvatarChange": "Сменить аватарку",
+  "webhookCopyUrl": "Копировать URL вебхука",
+  "webhookUrlCopied": "URL вебхука скопирован",
+  "webhookUrlLost": "URL этого вебхука не сохранился: он создан до обновления. Удалите его и создайте новый.",
+  "webhookDelete": "Удалить вебхук",
+  "webhookDeleteConfirmBody": "Программы больше не смогут писать по его адресу. Уже отправленные сообщения останутся.",
+  "webhookCardHint": "Сообщения от этого имени присылает программа по адресу вебхука канала.",
+  "webhookCreatedBy": "Создан пользователем @{nickname}, {date}",
+  "@webhookCreatedBy": {
+    "placeholders": {
+      "nickname": {
+        "type": "String"
+      },
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "webhookCreatedOn": "Создан {date}",
+  "@webhookCreatedOn": {
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "webhookDeleteConfirmTitle": "Удалить вебхук «{name}»?",
+  "@webhookDeleteConfirmTitle": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "permManageWebhooks": "Управлять вебхуками",
+  "permManageWebhooksDesc": "Создавать, менять и удалять вебхуки — адреса, по которым программы пишут в канал.",
+  "permManageStickersDesc": "Добавлять, менять и удалять стикеры сообщества.",
+  "serverSettingsStickers": "Стикеры",
+  "stickersSectionHint": "Стикеры сообщества могут отправлять все его участники — в любой переписке.",
+  "stickerAdd": "Добавить стикер",
+  "stickerEdit": "Изменить стикер",
+  "stickerFile": "Картинка",
+  "stickerFileHint": "PNG, JPEG, WebP или GIF. Картинка станет квадратом 512×512.",
+  "stickerFilePick": "Выбрать файл",
+  "stickerName": "Название",
+  "stickerNameHint": "Например, «Довольный кот»",
+  "stickerDescription": "Описание",
+  "stickerDescriptionHint": "Необязательно",
+  "stickerEmoji": "Эмодзи",
+  "stickerEmojiPick": "Выбрать эмодзи",
+  "stickerUpload": "Загрузить",
+  "stickerUnavailable": "Стикер недоступен",
+  "stickersPickerEmpty": "Здесь появятся стикеры ваших сообществ",
+  "stickerSearchHint": "Найти стикер",
+  "stickersFreeSlots": "Бесплатные слоты",
+  "stickersSlotsUsed": "Занято {count} из {limit} ячеек",
+  "@stickersSlotsUsed": {"placeholders": {"count": {"type": "int"}, "limit": {"type": "int"}}},
+  "stickerUploadAction": "Загрузить стикер",
+  "stickersPlusSlots": "+{count} слотов для стикеров",
+  "@stickersPlusSlots": {"placeholders": {"count": {"type": "int"}}},
+  "stickersPlusGet": "Оформить Glitch+",
+  "stickersPlusPromoTitle": "Больше стикеров с Glitch+",
+  "stickersPlusPromoBody": "Без подписки в сообществе можно загрузить {free} стикеров. С Glitch+ — до {limit}.",
+  "@stickersPlusPromoBody": {"placeholders": {"free": {"type": "int"}, "limit": {"type": "int"}}},
+  "glitchPlusPerkStickersTitle": "Расширенные лимиты стикеров",
+  "glitchPlusPerkStickersDesc": "Больше стикеров в ваших сообществах",
+  "roomWelcomeTitle": "Добро пожаловать на канал #{name}!",
+  "@roomWelcomeTitle": {"placeholders": {"name": {"type": "String"}}},
+  "roomWelcomeBody": "Это начало канала #{name}.",
+  "@roomWelcomeBody": {"placeholders": {"name": {"type": "String"}}},
+  "roomWelcomeSetup": "Настроить канал",
+  "mentionEveryoneHint": "Все, кто видит этот канал",
+  "mentionHereHint": "Все в сети, кто видит этот канал",
+  "notifServerTitle": "Настройки уведомлений",
+  "notifMuteServer": "Заглушить «{name}»",
+  "@notifMuteServer": {"placeholders": {"name": {"type": "String"}}},
+  "notifMuteDesc": "Уведомлений и непрочитанного не будет — кроме упоминаний вас.",
+  "notifMutedUntil": "Заглушено до {time}",
+  "@notifMutedUntil": {"placeholders": {"time": {"type": "String"}}},
+  "notifMutedForever": "Заглушено, пока вы не включите снова",
+  "notifMuteFor15m": "На 15 минут",
+  "notifMuteFor1h": "На 1 час",
+  "notifMuteFor3h": "На 3 часа",
+  "notifMuteFor8h": "На 8 часов",
+  "notifMuteFor24h": "На 24 часа",
+  "notifMuteForever": "Пока не включу снова",
+  "notifServerLevel": "Уведомления",
+  "notifLevelAll": "Все сообщения",
+  "notifLevelAllHint": "О каждом новом сообщении в каналах.",
+  "notifLevelMentions": "Только @упоминания",
+  "notifLevelMentionsHint": "Когда упомянули вас, вашу роль, @everyone или @here.",
+  "notifLevelNone": "Ничего",
+  "notifLevelNoneHint": "Без уведомлений. Красные числа упоминаний останутся.",
+  "notifSuppressEveryone": "Заглушить @everyone и @here",
+  "notifSuppressRoles": "Заглушить все упоминания ролей",
+  "notifSuppressHint": "Такие упоминания не подсвечиваются, не считаются и не присылают уведомлений.",
+  "notifServers": "Сообщества",
+  "notifServersDesc": "Сообщения в каналах — как настроено в каждом сообществе.",
+  "notifDefaultTitle": "Уведомления по умолчанию",
+  "notifDefaultHint": "Что получает новый участник, пока не настроит уведомления сам.",
+  "notifDefaultAllHint": "Участник узнаёт о каждом новом сообщении в каналах.",
+  "notifDefaultMentionsHint": "Только когда упомянули участника, его роль или всех. Удобно для больших сообществ.",
+  "tipUserSettings": "Личные настройки",
+  "tipDeafen": "Откл. звук",
+  "tipUndeafen": "Вкл. звук",
+  "tipMute": "Заглушить",
+  "tipUnmute": "Вкл. микрофон",
+  "tipOutputSettings": "Настройки вывода",
+  "tipInputSettings": "Настройки ввода",
+  "tipStreamSettings": "Настройки стрима",
+  "tipNoiseSuppression": "Шумоподавление",
+  "tipDisconnect": "Отключиться",
+  "tipShareScreen": "Продемонстрируйте\nсвой экран",
+  "tipStopShare": "Остановить демонстрацию",
+  "tipCameraOn": "Включить камеру",
+  "tipCameraOff": "Выключить камеру",
+  "tipCameraUnavailable": "Камера недоступна",
+  "tipDirectMessages": "Личные сообщения",
+  "tipCreateServer": "Создать сервер",
+  "tipCatalog": "Каталог",
+  "tipCreateRoom": "Создать канал",
+  "tipRoomSettings": "Настроить канал",
+  "tipInviteToServer": "Пригласить на сервер",
+  "tipCreateGroup": "Создать группу",
+  "tipStartCall": "Начать звонок",
+  "tipOpenProfilePanel": "Открыть боковой профиль",
+  "tipCloseProfilePanel": "Закрыть боковой профиль",
+  "tipMore": "Ещё",
+  "tipRemoveRole": "Удалить роль",
+  "tipAddRole": "Добавить роль",
+  "tipAddFriend": "Добавить в друзья",
+  "tipFriend": "Друг",
+  "tipFriendRequestSent": "Запрос отправлен",
+  "tipReact": "Нажмите, чтобы отреагировать",
+  "tipAddReaction": "Добавить реакцию",
+  "tipOpenMemberList": "Открыть список участников",
+  "tipCloseMemberList": "Закрыть список участников",
+  "serverSettingsSystem": "Система",
+  "serverSystemMessagesTitle": "Системные сообщения",
+  "serverSystemMessagesHint": "Сообщения о событиях сообщества, которые Glitch публикует сам.",
+  "serverSystemJoin": "Приветствовать новых участников",
+  "serverSystemJoinHint": "Случайное приветственное сообщение, когда кто-то присоединяется к сообществу.",
+  "serverSystemLeave": "Сообщать, когда участник уходит",
+  "serverSystemLeaveHint": "Сообщение, когда кто-то сам покидает сообщество. Об исключении и бане не сообщается.",
+  "serverSystemChannel": "Канал системных сообщений",
+  "serverSystemChannelHint": "В этом канале публикуются системные сообщения о событиях.",
+  "serverSystemNone": "Нет системных сообщений",
+  "serverSystemHiddenRoom": "Канал, скрытый от вас",
+  "systemGroupCreated": "{actor} создал(а) группу",
+  "@systemGroupCreated": {"placeholders": {"actor": {"type": "String"}}},
+  "systemMemberAdded": "{actor} добавил(а) {target} в группу",
+  "@systemMemberAdded": {"placeholders": {"actor": {"type": "String"}, "target": {"type": "String"}}},
+  "systemMemberRemoved": "{actor} исключил(а) {target} из группы",
+  "@systemMemberRemoved": {"placeholders": {"actor": {"type": "String"}, "target": {"type": "String"}}},
+  "systemGroupJoined": "{actor} присоединился(-ась) по ссылке-приглашению",
+  "@systemGroupJoined": {"placeholders": {"actor": {"type": "String"}}},
+  "systemGroupLeft": "{actor} покинул(а) группу",
+  "@systemGroupLeft": {"placeholders": {"actor": {"type": "String"}}},
+  "systemServerLeft": "{actor} покинул(а) сообщество",
+  "@systemServerLeft": {"placeholders": {"actor": {"type": "String"}}},
+  "systemWelcome1": "Рады тебя видеть, {name}.",
+  "@systemWelcome1": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome2": "Встречайте, {name}!",
+  "@systemWelcome2": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome3": "Знакомьтесь, это {name}!",
+  "@systemWelcome3": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome4": "Добро пожаловать, {name}! Располагайся.",
+  "@systemWelcome4": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome5": "Привет, {name}! Хорошо, что ты с нами.",
+  "@systemWelcome5": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome6": "{name} уже здесь — поприветствуйте!",
+  "@systemWelcome6": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome7": "Добро пожаловать, {name}!",
+  "@systemWelcome7": {"placeholders": {"name": {"type": "String"}}},
+  "systemWelcome8": "{name} на связи!",
+  "@systemWelcome8": {"placeholders": {"name": {"type": "String"}}},
+  "serverSystemSubtitle": "Как сообщество само сообщает о событиях и что получают новые участники.",
+  "webhookSendMessage": "Отправить сообщение",
+  "webhookComposerEditor": "Сообщение",
+  "webhookComposerPreview": "Предпросмотр",
+  "webhookComposerProfile": "Профиль",
+  "webhookComposerAvatarUrl": "Ссылка на аватарку",
+  "webhookComposerContent": "Текст",
+  "webhookComposerContentHint": "Текст сообщения",
+  "webhookComposerFiles": "Файлы",
+  "webhookComposerFilesRule": "{count, plural, one{До {count} картинки} few{До {count} картинок} many{До {count} картинок} other{До {count} картинок}} PNG, JPEG, WebP или GIF либо один файл другого вида",
+  "@webhookComposerFilesRule": {"placeholders": {"count": {"type": "int"}}},
+  "webhookComposerFilesMixed": "В одном сообщении могут быть только картинки или только один файл другого вида",
+  "webhookComposerAttach": "Прикрепить файлы",
+  "webhookComposerEmbeds": "Карточки",
+  "webhookComposerEmbedText": "Текст карточек — {count} из {max} знаков",
+  "@webhookComposerEmbedText": {"placeholders": {"count": {"type": "int"}, "max": {"type": "int"}}},
+  "webhookComposerEmbed": "Карточка {index}",
+  "@webhookComposerEmbed": {"placeholders": {"index": {"type": "int"}}},
+  "webhookComposerAddEmbed": "Добавить карточку",
+  "webhookComposerEmbedDelete": "Удалить карточку",
+  "webhookComposerAuthor": "Автор",
+  "webhookComposerAuthorUrl": "Ссылка автора",
+  "webhookComposerAuthorIcon": "Значок автора",
+  "webhookComposerTitle": "Заголовок",
+  "webhookComposerTitleUrl": "Ссылка заголовка",
+  "webhookComposerDescription": "Описание",
+  "webhookComposerColor": "Цвет",
+  "webhookComposerFields": "Поля",
+  "webhookComposerField": "Поле {index}",
+  "@webhookComposerField": {"placeholders": {"index": {"type": "int"}}},
+  "webhookComposerFieldName": "Название",
+  "webhookComposerFieldValue": "Значение",
+  "webhookComposerFieldInline": "В одном ряду с соседними",
+  "webhookComposerAddField": "Добавить поле",
+  "webhookComposerImage": "Картинка",
+  "webhookComposerThumbnail": "Миниатюра",
+  "webhookComposerFooter": "Подпись внизу",
+  "webhookComposerFooterIcon": "Значок подписи",
+  "webhookComposerTimestamp": "Время отправки в подписи",
+  "webhookComposerSend": "Отправить",
+  "webhookComposerClear": "Очистить",
+  "webhookComposerClearTitle": "Очистить сообщение?",
+  "webhookComposerClearBody": "Текст, карточки и файлы будут удалены из формы.",
+  "webhookComposerSent": "Сообщение отправлено",
+  "webhookComposerEmpty": "Добавьте текст, файл или карточку",
+  "webhookComposerBody": "Основное",
+  "webhookComposerImages": "Картинки",
+  "webhookComposerEmbedUp": "Переместить выше",
+  "webhookComposerEmbedDown": "Переместить ниже",
+  "webhookComposerEmbedCopy": "Копировать карточку",
+  "activityPlaying": "Играет в",
+  "activityTab": "Активность",
+  "activityCurrent": "Текущая активность",
+  "activityNone": "Сейчас ничего не происходит",
+  "activityRecent": "Недавняя активность",
+  "activityPlayedToday": "Сегодня",
+  "activityPlayedDaysAgo": "{days} д. назад",
+  "@activityPlayedDaysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "activityPlayedWeekAgo": "Неделю назад",
+  "activityPlayedTwoWeeksAgo": "2 недели назад",
+  "activityPlayedMonthAgo": "Месяц назад",
+  "serverProfileGamesTypeToSearch": "Начните вводить название игры",
+  "privacyShowPlaying": "Показывать, во что я играю",
+  "privacyShowPlayingDesc": "Во что вы играете сейчас и играли за последние 30 дней (игры узнаёт программа Glitch для Windows), видят те, кто видит вас в сети.",
+  "audioPlay": "Воспроизвести",
+  "audioPause": "Пауза",
+  "audioVolume": "Громкость",
+  "audioPlaybackError": "Не удалось воспроизвести звук. Попробуйте ещё раз или скачайте файл.",
+  "achievements": "Достижения",
+  "achievementsEmpty": "У вас пока нет достижений.",
+  "achievementCups": "Кубки",
+  "achievementMedals": "Медали",
+  "achievementBadges": "Значки",
+  "achievementHistory": "История получения",
+  "achievementDaysAgo": "{days, plural, =0{сегодня} one{{days} день назад} few{{days} дня назад} many{{days} дней назад} other{{days} дня назад}}",
+  "@achievementDaysAgo": {"placeholders": {"days": {"type": "int"}}},
+  "achievementPossible": "Возможное достижение",
+  "achievementPatience": "Терпение, мой друг",
+  "achievementPlace": "Разместить",
+  "achievementArrangeHint": "Перетащите награду на полочку или нажмите «Разместить», затем выберите награду для замены. Изменения сохраняются кнопкой «Сохранить»."
+}

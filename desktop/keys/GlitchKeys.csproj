@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Raw Input даёт состояние назначенных клавиш без перехвата нажатий. -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>glitch-keys</AssemblyName>
+    <RootNamespace>GlitchKeys</RootNamespace>
+    <Product>Glitch</Product>
+    <Company>Glitch</Company>
+    <AssemblyTitle>Glitch — горячие клавиши</AssemblyTitle>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- Без файла glitch-keys.exe.config рядом: в программу кладётся один exe. -->
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Описания .NET Framework без отдельной установки Developer Pack. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

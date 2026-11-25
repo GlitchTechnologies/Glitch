@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Glitch — мессенджер со сквозным шифрованием.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Glitch">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <meta name="theme-color" content="#151515">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Glitch</title>
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="preload" as="image" href="assets/assets/icon.png">
+
+  <style>
+    #glitch-native-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #151515;
+    }
+    #glitch-native-splash .g-mark {
+      position: relative;
+      overflow: hidden;
+      width: 88px;
+      height: 88px;
+      border-radius: 19px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.549), 0 0 0 1px rgba(255, 255, 255, 0.141);
+    }
+    #glitch-native-splash .g-layer {
+      position: absolute;
+      inset: 0;
+      background-image: url("icons/Icon-512.png");
+      background-size: cover;
+      background-position: center;
+    }
+    #glitch-native-splash .g-layer-a { clip-path: inset(7% 0 71% 0);  transform: translateX(var(--shift-a, 0px)); }
+    #glitch-native-splash .g-layer-b { clip-path: inset(45% 0 33% 0); transform: translateX(var(--shift-b, 0px)); }
+    #glitch-native-splash .g-layer-c { clip-path: inset(76% 0 5% 0);  transform: translateX(var(--shift-c, 0px)); }
+  </style>
+</head>
+<body>
+  <div id="glitch-native-splash">
+    <span class="g-mark">
+      <span class="g-layer g-layer-base"></span>
+      <span class="g-layer g-layer-a"></span>
+      <span class="g-layer g-layer-b"></span>
+      <span class="g-layer g-layer-c"></span>
+    </span>
+  </div>
+
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script src="flutter_bootstrap.js" async></script>
+  <script>
+    // Таймингы глитча — точный перенос website/js/glitch-logo.js (который сам
+    // 1:1 перенесён из widgets/glitch_logo.dart): пауза 3000-6000мс, затем
+    // 3 фазы сдвига (80/80/60мс), сброс. BASE_SIZE=74 — размер, под который
+    // подобраны исходные сдвиги в пикселях в Dart; здесь метка 88px, поэтому
+    // сдвиги масштабируются пропорционально, не копируются как есть.
+    (function () {
+      var BASE_SIZE = 74;
+      var SIZE = 88;
+      var SCALE = SIZE / BASE_SIZE;
+      var PHASES = [
+        { a: 5, b: -6, c: 4, hold: 80 },
+        { a: -3, b: 3, c: -2, hold: 80 },
+        { a: 2, b: -2, c: 1, hold: 60 },
+      ];
+      var el = document.querySelector('#glitch-native-splash .g-mark');
+      var stopped = false;
+
+      function step(i) {
+        if (stopped || !el) return;
+        if (i >= PHASES.length) {
+          el.style.setProperty('--shift-a', '0px');
+          el.style.setProperty('--shift-b', '0px');
+          el.style.setProperty('--shift-c', '0px');
+          schedule();
+          return;
+        }
+        var p = PHASES[i];
+        el.style.setProperty('--shift-a', (p.a * SCALE).toFixed(2) + 'px');
+        el.style.setProperty('--shift-b', (p.b * SCALE).toFixed(2) + 'px');
+        el.style.setProperty('--shift-c', (p.c * SCALE).toFixed(2) + 'px');
+        setTimeout(function () { step(i + 1); }, p.hold);
+      }
+
+      function schedule() {
+        var delay = 3000 + Math.random() * 3000;
+        setTimeout(function () { if (!stopped) step(0); }, delay);
+      }
+
+      schedule();
+
+      window.addEventListener('flutter-first-frame', function () {
+        stopped = true;
+        var wrap = document.getElementById('glitch-native-splash');
+        if (wrap) wrap.remove();
+      });
+    })();
+  </script>
+</body>
+</html>

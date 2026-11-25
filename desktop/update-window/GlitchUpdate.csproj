@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    ОКНО «УСТАНОВКА ОБНОВЛЕНИЯ…» (2026-11-07, как у Discord): glitch-update.exe.
+    Пока ставится новая версия, сама программа закрыта (свои файлы не
+    заменить, пока они работают), и экран раньше был пустым ~15 секунд. Это
+    окно встаёт на место заставки — тот же размер, цвета, логотип и надпись —
+    и закрывается само, когда новая версия Glitch показала свою заставку
+    «Запуск…». Само обновление ставит, как и прежде, самообновление
+    (src/main/updater.ts); это окно только показывается. Кто, когда и с какими
+    параметрами его запускает — src/main/update-window.ts.
+    .NET Framework 4.8 — как окно установщика и glitch-keys.exe. Собирается
+    шагом `npm run update-window` (входит в `npm run dist`), кладётся в
+    resources программы; программа запускает его копию из временной папки —
+    файл в папке программы установщик заменяет.
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>glitch-update</AssemblyName>
+    <RootNamespace>GlitchUpdate</RootNamespace>
+    <ApplicationIcon>..\static\icon.ico</ApplicationIcon>
+    <Product>Glitch</Product>
+    <Company>Glitch</Company>
+    <AssemblyTitle>Glitch — установка обновления</AssemblyTitle>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <!-- Без файла glitch-update.exe.config рядом: в программу кладётся один exe. -->
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Логотип — тем же кодом, что в окне установщика, не копией. -->
+    <Compile Include="..\installer\AnimatedLogo.cs" Link="AnimatedLogo.cs" />
+    <!-- Та же картинка, что на заставке (static/splash.html). -->
+    <EmbeddedResource Include="..\static\logo.gif" LogicalName="logo.gif" />
+  </ItemGroup>
+</Project>

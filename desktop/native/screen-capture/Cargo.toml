@@ -1,0 +1,25 @@
+[package]
+name = "glitch-screen-capture"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[features]
+capture-probe = ["windows/Win32_System_Diagnostics_Etw", "windows/Win32_System_Threading"]
+
+[dependencies]
+napi = { version = "3", default-features = false, features = ["napi6", "dyn-symbols"] }
+napi-derive = "3"
+windows-capture = "=2.0.1"
+windows-core = "=0.62.2"
+windows = { version = "=0.62.2", features = [
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Dxgi",
+    "Win32_Media_Audio",
+    "Win32_Security",
+    "Win32_System_Com_StructuredStorage",
+    "Win32_System_Performance",
+    "Win32_System_Variant",
+] }

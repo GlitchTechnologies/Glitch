@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WindowsPerformanceRecorder Version="1.0" Author="Glitch">
+  <Profiles>
+    <EventCollector Id="GlitchQueueCollector" Name="Glitch GPU Queue Markers">
+      <BufferSize Value="64"/>
+      <Buffers Value="32"/>
+    </EventCollector>
+    <EventProvider Id="GlitchQueueProvider" Name="5cb165ff-eaff-4cf8-9244-55d1adef74e5" Level="4">
+      <Keywords>
+        <Keyword Value="0x1"/>
+      </Keywords>
+    </EventProvider>
+    <Profile Id="GlitchGpuQueue.Verbose.File" Name="GlitchGpuQueue" Description="Glitch GPU copy markers" LoggingMode="File" DetailLevel="Verbose">
+      <Collectors>
+        <EventCollectorId Value="GlitchQueueCollector">
+          <EventProviders>
+            <EventProviderId Value="GlitchQueueProvider"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+    <Profile Id="GlitchGpuQueue.Verbose.Memory" Name="GlitchGpuQueue" Description="Glitch GPU copy markers" LoggingMode="Memory" DetailLevel="Verbose">
+      <Collectors>
+        <EventCollectorId Value="GlitchQueueCollector">
+          <EventProviders>
+            <EventProviderId Value="GlitchQueueProvider"/>
+          </EventProviders>
+        </EventCollectorId>
+      </Collectors>
+    </Profile>
+  </Profiles>
+</WindowsPerformanceRecorder>

@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Окно запускает встроенный установщик electron-builder, чтобы сохранить штатное обновление и удаление. -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>GlitchSetup</AssemblyName>
+    <RootNamespace>GlitchSetup</RootNamespace>
+    <ApplicationIcon>..\static\icon.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Product>Glitch</Product>
+    <Company>Glitch</Company>
+    <AssemblyTitle>Установка Glitch</AssemblyTitle>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Описания .NET Framework без отдельной установки Developer Pack. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Вложенное: установщик программы, её размер (для полосы загрузки), логотип. -->
+    <EmbeddedResource Include="..\dist\glitch-engine.exe" LogicalName="glitch-engine.exe" />
+    <EmbeddedResource Include="..\dist\payload-size.txt" LogicalName="payload-size.txt" />
+    <EmbeddedResource Include="..\static\logo.gif" LogicalName="logo.gif" />
+  </ItemGroup>
+
+</Project>

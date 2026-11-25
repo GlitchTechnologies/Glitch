@@ -1,0 +1,256 @@
+name: glitch
+description: Glitch Messenger
+
+publish_to: 'none'
+# X.Y.Z+N — versionName+versionCode для Android (см. android/app/build.gradle,
+# они читаются отсюда). versionCode (число после +) ОБЯЗАН расти с каждой
+# заливкой в RuStore, иначе обновление не примут.
+# 2026-08-01: было 1.0.0+1, но lib/core/app_version.dart показывал v1.0.1 —
+# то есть в сторе лежала 1.0.0, а приложение рисовало 1.0.1. Свели: теперь
+# номер здесь совпадает с тем, что видит пользователь и что уходит в отчёты
+# об ошибках (source=client в app_logs).
+version: 1.0.1+2
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  model_viewer_plus: 1.9.3
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # Адреса веб-версии без `#` (usePathUrlStrategy, services/web_address.dart).
+  # Часть самого Flutter; на телефоне функция ничего не делает.
+  flutter_web_plugins:
+    sdk: flutter
+  # Свой плагин: звук и вибрация входящего вызова.
+  #
+  # Лежит внутри проекта (plugins/), а не в интернете — это наш код, просто
+  # оформленный плагином. Иначе никак: включать звонок должен и фоновый код,
+  # который Android поднимает по пушу при закрытом приложении, а он видит
+  # только то, что оформлено плагином. Пока проигрыватель жил в MainActivity,
+  # телефон с убитым приложением молчал.
+  glitch_ringtone:
+    path: plugins/glitch_ringtone
+  # Свой плагин: шумоподавление микрофона на Android (DeepFilterNet3 в
+  # обработке звука WebRTC). В браузере фильтр свой —
+  # lib/services/noise_filter_web.dart.
+  glitch_noise_filter:
+    path: plugins/glitch_noise_filter
+  # XFile — «файл» в виде, понятном И телефону, И браузеру: имя, размер, чтение
+  # потоком. Пакет и так уже стоит в проекте как зависимость image_picker,
+  # file_picker и camera (все трое сами отдают XFile), но объявлен явно: код
+  # проекта использует его напрямую, а полагаться на чужую зависимость нельзя —
+  # обновят соседний пакет, и сборка развалится без видимой причины.
+  cross_file: ^0.3.3
+  # Доступ к устройству страницы в браузере. Нужен ровно в одном месте —
+  # сохранение файла в «Загрузки» (services/media_actions_web.dart):
+  # атрибут download браузеры игнорируют для чужого домена, поэтому файл
+  # приходится отдавать на сохранение уже как свой. Пакет и так есть в
+  # дереве зависимостей веб-сборки, объявлен явно по той же причине, что
+  # и cross_file — код использует его напрямую.
+  web: ^1.0.0
+  # HTTP запросы
+  http: ^1.2.0
+  # HTTP с нативным прогрессом загрузки (для видео/файлов)
+  dio: ^5.7.0
+  # WebSocket
+  web_socket_channel: ^2.4.0
+  # Хранение токена
+  shared_preferences: ^2.2.2
+  # Название устройства для списка активных сессий.
+  # Ветка 12 — не ниже 12.3.0 требует livekit_client (см. ниже). Ветку 13 НЕ
+  # брать: она требует win32 6, а share_plus 10 сидит на win32 5 — зависимости
+  # не сойдутся. Версия 12 требует AGP >= 8.12.1, Gradle >= 8.13, Kotlin 2.2.0
+  # (android/settings.gradle и плагин glitch_ringtone подняты вместе с ней).
+  device_info_plus: ^12.4.0
+  # Аппаратный ANDROID_ID — переживает переустановку APK, нужен чтобы
+  # device_id не плодил новую "сессию" при каждой переустановке (см. auth_service.dart)
+  android_id: ^0.3.6
+  # Управление состоянием
+  provider: ^6.1.2
+  # Выбор фото/видео
+  image_picker: ^1.0.7
+  # Доступ к галерее устройства
+  photo_manager: ^3.3.0
+  # Живое превью и съёмка с камеры (шторка «Прикрепить»)
+  camera: ^0.11.0+2
+  # Выбор любых файлов с устройства
+  file_picker: ^8.0.0
+  # Открытие файлов системным просмотрщиком
+  open_filex: ^4.7.0
+  # Геолокация устройства
+  geolocator: ^13.0.2
+  # Открытие ссылок и URI (geo:, https:)
+  url_launcher: ^6.3.1
+  # Форматирование дат
+  intl: ^0.20.2
+  # Загрузка картинок по URL с кэшированием
+  cached_network_image: ^3.3.1
+  # Кэш-менеджер для медиафайлов (используется напрямую в MediaCacheManager)
+  flutter_cache_manager: ^3.3.1
+  # Путь к папкам на устройстве
+  path_provider: ^2.1.4
+  # Сохранение фото/видео в галерею устройства (MediaStore)
+  gal: ^1.2.1
+  # Нативный диалог «Поделиться» (Android share sheet / iOS share)
+  share_plus: ^10.1.4
+  # Генерация QR-кодов
+  qr_flutter: ^4.1.0
+  # Сканирование QR-кодов камерой (вход по QR)
+  mobile_scanner: ^6.0.2
+  # Сжатие фото перед отправкой
+  flutter_image_compress: ^2.3.0
+  # Сжатие видео перед отправкой (720p, разумный битрейт)
+  video_compress: ^3.1.2
+  # Локальная БД — кэш чатов и сообщений
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  # Воспроизведение видео (libmpv — FFmpeg, любой кодек, software fallback)
+  media_kit: ^1.1.11
+  media_kit_video: ^1.2.4
+  media_kit_libs_video: ^1.0.4
+  # Превью первого кадра видео
+  video_thumbnail: ^0.5.3
+  # Deep links — обработка glitch.app/... ссылок
+  app_links: ^6.3.4
+  # Приём «Поделиться в Glitch» из других приложений (Android SEND/SEND_MULTIPLE).
+  # share_plus выше — это ИСХОДЯЩЕЕ «Поделиться» (Glitch → другие); этот плагин
+  # принимает ВХОДЯЩИЙ контент. Обрабатывается в main.dart.
+  # ВЕРСИЯ ЗАФИКСИРОВАНА (без ^): 1.9.0 требует compileSdk 37 (превью-SDK, Gradle
+  # не находит target android-37 → сборка падает). 1.8.1 — последняя версия под
+  # стабильный compileSdk 34, API идентичен (instance/getMediaStream/reset,
+  # SharedMediaType). Каретку не ставить — иначе pub снова подтянет 1.9.0.
+  receive_sharing_intent: 1.8.1
+  # Запись голосовых сообщений (Opus/OGG)
+  flutter_sound: ^9.14.6
+  permission_handler: ^11.3.1
+  # Звонки. Голос идёт НАПРЯМУЮ между телефонами (шифрование SRTP из коробки),
+  # сервер только знакомит собеседников — см. app/services/call_service.py.
+  # Требует minSdk 23; у нас 24 (android/app/build.gradle), поднимать не нужно.
+  # ВЕРСИЯ ЗАФИКСИРОВАНА (без ^): её диктует livekit_client — он требует ровно
+  # эту. Поднимать только вместе с livekit_client и только до той, что он просит.
+  flutter_webrtc: 1.6.2+hotfix.3
+  # Медиасервер звонков LiveKit — переход на него описан в CALLS_SFU_PLAN.md.
+  # ВЕРСИЯ ЗАФИКСИРОВАНА (без ^): от версии зависит, как пакет обращается со
+  # звуком на Android, а у нас звуком владеет системная телефония
+  # (glitch_ringtone). Обновлять осознанно, перечитав его Android-код.
+  #
+  # ⚠️ Уже одно подключение пакета меняет звук на Android: при запуске плагин
+  # выключает у flutter_webrtc управление звуком
+  # (AudioSwitchManager.setAudioSessionManagementEnabled(false) в
+  # LiveKitPlugin.onAttachedToEngine). Прямые звонки, которые ведёт системная
+  # телефония, это не задевает; там, где телефония звонок не приняла, пропадают
+  # «режим разговора» и громкая связь через Helper.setSpeakerphoneOn. Хозяина
+  # звука назначает этап 3 плана (VoiceConnection, режим manual).
+  #
+  # Новых разрешений Android не добавляет (манифест плагина пуст); библиотеку
+  # audioswitch с JitPack уже тянул flutter_webrtc.
+  livekit_client: 2.13.0
+  # Веб-обёртка дорожки (MediaStreamTrackWeb) для шумоподавления в браузере:
+  # очищенный звук подставляется отправителю медиасервера
+  # (lib/services/noise_filter_web.dart). Пакет и так стоит — его тянет
+  # flutter_webrtc, — объявлен явно, раз им пользуется наш код. ВЕРСИЯ — ТА,
+  # ЧТО ВЫБРАЛ flutter_webrtc (pubspec.lock); поднимать вместе с ним.
+  dart_webrtc: 1.8.1
+  # Экран не гаснет, пока в звонке идёт ВИДЕО (своя камера или чужая картинка).
+  # Для голоса такой блокировки нет и быть не должно — телефон у уха, экран
+  # обязан гаснуть.
+  #
+  # Пакет, а не свой плагин: под капотом ровно то же, что делают нативные
+  # приложения (FLAG_KEEP_SCREEN_ON на Android, Screen Wake Lock API в
+  # браузере), но одной строкой и сразу для обеих наших платформ. Своя
+  # реализация была бы Android-only, а веб у нас полноправная платформа.
+  # Новых разрешений НЕ требует — модерации RuStore эта зависимость не касается.
+  wakelock_plus: ^1.2.8
+  # Фоновый сервис на время разговора: карточка «Активный звонок» с кнопкой
+  # «Завершить» в шторке. Это НЕ украшение — с Android 11 система забирает
+  # микрофон у приложения, ушедшего в фон, и без foreground-сервиса разговор
+  # обрывается, стоит свернуть Glitch. Карточка обязательна по правилам самой
+  # Android: у любого такого сервиса должно быть видимое уведомление.
+  #
+  # Специальный плагин для «звонкового» экрана (flutter_callkit_incoming)
+  # СОЗНАТЕЛЬНО НЕ ВЗЯТ: он требует launchMode="singleInstance", а в проекте
+  # шесть плагинов запускают внешние активити (камера, image_picker,
+  # file_picker, mobile_scanner, share_plus, receive_sharing_intent) — при
+  # singleInstance они уходят в другую задачу, и выбранное фото или
+  # отсканированный QR перестают возвращаться в приложение. Полноэкранный
+  # входящий сделан через flutter_local_notifications (fullScreenIntent),
+  # который уже есть в проекте, — см. services/incoming_call_notification.dart.
+  flutter_foreground_task: ^10.0.0
+  # Firebase push-уведомления
+  firebase_core: ^3.6.0
+  firebase_messaging: ^15.1.3
+  flutter_local_notifications: ^18.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/icon.png
+    # Все звуки (assets/sounds/) — сгенерированы, а не взяты откуда-то,
+    # поэтому вопросов с лицензией нет вовсе. Собирает их
+    # tool/glitch_sounds_build.py (2026-10-15): вход/выход в голосе,
+    # включение/выключение видео, микрофон и звук включены/выключены, новое
+    # сообщение, «переместили», рацию (lib/services/voice_cue.dart), мелодию
+    # входящего (glitch_voice_calling.mp3) и гудки исходящего (ringback.ogg);
+    # мелодия и гудки зациклены по построению. На Android играются КОПИИ из
+    # android/app/src/main/res/raw (voice_*, call_ringtone.mp3,
+    # call_ringback.ogg) — скрипт кладёт и их.
+    - assets/sounds/
+  # Inter Tight — фирменный шрифт, забандлен локально (лицензия OFL), а не
+  # качается по сети через google_fonts — раньше при первом запуске без сети
+  # шрифт молча не загружался и текст откатывался на системный.
+  #
+  # ОТДЕЛЬНЫЙ ФАЙЛ НА КАЖДЫЙ ВЕС, а не один вариативный под всеми весами
+  # (исправлено 2026-09-24). Прежний приём «один Variable.ttf, повторённый
+  # под weight 100…900» НЕ работает: Flutter берёт из вариативного файла его
+  # начертание по умолчанию (400) и ось веса сам не двигает, а когда просят
+  # 600+, движок рисует ПОДДЕЛЬНЫЙ жирный — раздувает контуры обычных букв.
+  # Отсюда рваный, «пиксельный» полужирный текст (особенно в браузере) во
+  # всех ~210 местах с w600/w700.
+  #
+  # Файлы сделаны из assets/fonts/InterTight-Variable.ttf и
+  # InterTight-Italic-Variable.ttf (fontTools, varLib.instancer — они лежат
+  # рядом как исходник и в сборку НЕ входят). Заведены ровно те веса, что есть
+  # в коде: 400/500/600/700/800 и курсив 400. Понадобится новый вес — сделать
+  # из исходника ещё один файл тем же способом и дописать сюда, иначе Flutter
+  # возьмёт ближайший и, если он легче, снова подделает жирность.
+  fonts:
+    - family: Inter Tight
+      fonts:
+        - asset: assets/fonts/InterTight-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/InterTight-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/InterTight-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/InterTight-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/InterTight-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/InterTight-Italic.ttf
+          weight: 400
+          style: italic
+    - family: Noto Color Emoji
+      fonts:
+        - asset: assets/fonts/NotoColorEmoji-Regular.ttf
+    # Свои значки — которых нет в Material Icons (lib/theme/glitch_icons.dart).
+    # Исходник — assets/fonts/glitch_icons_build.py, в сборку не входит.
+    - family: GlitchIcons
+      fonts:
+        - asset: assets/fonts/GlitchIcons.ttf
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon.png"
+  adaptive_icon_background: "#151517"
+  adaptive_icon_foreground: "assets/icon.png"

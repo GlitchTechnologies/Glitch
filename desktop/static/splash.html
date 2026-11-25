@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline'" />
+    <title>Glitch</title>
+    <script>
+      const q = new URLSearchParams(location.search);
+      const root = document.documentElement.style;
+      for (const [key, css] of [['card', '--card'], ['border', '--border'], ['text', '--text'], ['second', '--second'], ['accent', '--accent']]) {
+        const v = q.get(key);
+        if (v && /^#[0-9a-fA-F]{6}$/.test(v)) root.setProperty(css, v);
+      }
+    </script>
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        background: transparent;
+        overflow: hidden;
+        user-select: none;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+      }
+      .card {
+        box-sizing: border-box;
+        height: 100%;
+        border-radius: 12px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        -webkit-app-region: drag;
+        app-region: drag;
+      }
+      img {
+        width: 112px;
+        height: 112px;
+        border-radius: 24px;
+      }
+      #text {
+        margin-top: 28px;
+        min-height: 40px;
+        color: var(--text);
+        font-size: 15px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 20px;
+      }
+      #slot {
+        margin-top: 14px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #retry {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 8px;
+        background: var(--accent);
+        color: #ffffff;
+        font: inherit;
+        font-size: 13px;
+        font-weight: 600;
+        cursor: pointer;
+        visibility: hidden;
+        -webkit-app-region: no-drag;
+        app-region: no-drag;
+      }
+      #retry:hover { filter: brightness(1.1); }
+      #bar {
+        display: none;
+        width: 180px;
+        height: 6px;
+        border-radius: 3px;
+        background: var(--border);
+        overflow: hidden;
+      }
+      #fill {
+        width: 0;
+        height: 100%;
+        border-radius: 3px;
+        background: var(--accent);
+        transition: width 0.2s linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <img src="logo.gif" alt="" draggable="false" />
+      <div id="text"></div>
+      <div id="slot">
+        <button id="retry" type="button"></button>
+        <div id="bar"><div id="fill"></div></div>
+      </div>
+    </div>
+    <script>
+      const text = document.getElementById('text');
+      const retry = document.getElementById('retry');
+      const bar = document.getElementById('bar');
+      const fill = document.getElementById('fill');
+      retry.addEventListener('click', () => window.glitchSplash.retryNow());
+      window.glitchSplash.onState((state) => {
+        text.textContent = state.text;
+        retry.textContent = state.retryLabel || '';
+        retry.style.visibility = state.retryLabel ? 'visible' : 'hidden';
+        const hasBar = typeof state.progress === 'number';
+        retry.style.display = hasBar ? 'none' : '';
+        bar.style.display = hasBar ? 'block' : 'none';
+        if (hasBar) fill.style.width = `${Math.round(Math.min(1, Math.max(0, state.progress)) * 100)}%`;
+      });
+    </script>
+  </body>
+</html>

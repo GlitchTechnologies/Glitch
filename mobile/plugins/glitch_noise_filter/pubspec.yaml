@@ -1,0 +1,26 @@
+name: glitch_noise_filter
+description: Шумоподавление микрофона Glitch на Android — DeepFilterNet3 в обработке звука WebRTC.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.3.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Фильтр встаёт в обработку звука flutter_webrtc (его Android-классы
+  # AudioProcessingAdapter / FlutterWebRTCPlugin), поэтому плагин зависит от
+  # него напрямую — так сборка Flutter подключает его Android-проект и сюда.
+  # ВЕРСИЯ — ТА ЖЕ, ЧТО В ПРИЛОЖЕНИИ (её диктует livekit_client); поднимать
+  # вместе, перечитав AudioProcessingAdapter.
+  flutter_webrtc: 1.6.2+hotfix.3
+
+flutter:
+  plugin:
+    platforms:
+      # Только Android: в браузере фильтр свой (lib/services/noise_filter_web.dart).
+      android:
+        package: com.glitch.noisefilter
+        pluginClass: GlitchNoiseFilterPlugin

@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    ЗАПУЩЕННЫЕ ПРОГРАММЫ — для «Играет в» (2026-11-07, как у Discord):
+    крошечная своя часть программы, glitch-games.exe. По просьбе программы
+    перечисляет запущенные процессы — путь к файлу и время запуска —
+    штатными функциями Windows (у Electron этого нет: Node не знает путей
+    чужих процессов). Запускает и останавливает её src/main/games.ts, там же
+    сверка со справочником: наружу из программы уходят только найденные игры.
+    Протокол и устройство — в Program.cs.
+
+    .NET Framework 4.8 — как glitch-keys.exe и окно установщика: встроен в
+    Windows 10 (1903+) и 11. Собирается шагом `npm run games` (входит в
+    `npm run dist`), кладётся в resources программы.
+  -->
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>10.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>glitch-games</AssemblyName>
+    <RootNamespace>GlitchGames</RootNamespace>
+    <Product>Glitch</Product>
+    <Company>Glitch</Company>
+    <AssemblyTitle>Glitch — запущенные игры</AssemblyTitle>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- Без файла glitch-games.exe.config рядом: в программу кладётся один exe. -->
+    <GenerateSupportedRuntime>false</GenerateSupportedRuntime>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Описания .NET Framework без отдельной установки Developer Pack. -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

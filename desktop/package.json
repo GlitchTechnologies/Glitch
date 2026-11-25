@@ -1,0 +1,97 @@
+{
+  "name": "glitch-desktop",
+  "productName": "Glitch",
+  "version": "1.0.10",
+  "description": "Glitch для Windows — веб-версия Glitch в оболочке Electron",
+  "author": "Glitch",
+  "private": true,
+  "main": "out/main/index.js",
+  "scripts": {
+    "build": "node scripts/check-app-id.js && node scripts/check-style.js && tsc -p tsconfig.json",
+    "check": "node scripts/check-app-id.js && node scripts/check-style.js && tsc -p tsconfig.json --noEmit",
+    "keys": "dotnet publish keys/GlitchKeys.csproj -c Release -o build/keys",
+    "games": "dotnet publish games/GlitchGames.csproj -c Release -o build/games",
+    "update-window": "dotnet publish update-window/GlitchUpdate.csproj -c Release -o build/update-window",
+    "capture": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File native/screen-capture/build.ps1",
+    "start": "npm run build && npm run keys && npm run games && npm run update-window && npm run capture && electron .",
+    "dist": "npm run build && npm run keys && npm run games && npm run update-window && npm run capture && electron-builder --win --x64 --publish never && node scripts/prepare-setup.js && dotnet publish installer/GlitchSetup.csproj -c Release -o dist && node scripts/site-files.js"
+  },
+  "build": {
+    "appId": "ru.glitchapp.desktop",
+    "productName": "Glitch",
+    "copyright": "Glitch",
+    "directories": {
+      "output": "dist"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://glitchapp.online/download/windows"
+      }
+    ],
+    "files": [
+      "out/**/*",
+      "static/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "build/keys/glitch-keys.exe",
+        "to": "glitch-keys.exe"
+      },
+      {
+        "from": "build/games/glitch-games.exe",
+        "to": "glitch-games.exe"
+      },
+      {
+        "from": "build/update-window/glitch-update.exe",
+        "to": "glitch-update.exe"
+      },
+      {
+        "from": "build/screen-capture/x86_64-pc-windows-msvc/release/glitch_screen_capture.node",
+        "to": "screen-capture/glitch_screen_capture.node"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "static/icon.ico",
+      "artifactName": "glitch-engine-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "Glitch",
+      "uninstallDisplayName": "Glitch",
+      "runAfterFinish": false,
+      "deleteAppDataOnUninstall": false,
+      "installerLanguages": [
+        "ru_RU",
+        "en_US",
+        "uk_UA",
+        "zh_CN"
+      ],
+      "multiLanguageInstaller": true,
+      "include": "installer/engine.nsh"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "6.8.10"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.1",
+    "electron": "44.7.0",
+    "electron-builder": "26.15.3",
+    "typescript": "5.9.3"
+  }
+}
